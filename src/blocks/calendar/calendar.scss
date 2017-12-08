@@ -1,0 +1,13 @@
+// В этом файле должны быть стили для БЭМ-блока calendar, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.calendar {
+  width: 100%;
+  min-height: 150px;
+  margin-bottom: 20px;
+  background-color: $gray-lightest;
+
+  $block-name:                &; // #{$block-name}__element
+
+}

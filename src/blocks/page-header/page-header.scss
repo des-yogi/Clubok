@@ -1,0 +1,74 @@
+// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-header {
+  @include row;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid $second-color;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__logo {
+    @include col (
+      $screen:  xs,
+      $column:  3,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    @include col (
+      $screen:  xs,
+      $column:  9,
+      $columns: $grid-columns,
+      $gutter:  $grid-gutter-width
+    )
+  }
+
+  &__burger {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // flex-shrink: 1;
+
+  &__phone-list {
+    width: calc(100% - 60px);
+    padding-left: 0;
+  }
+
+  &__phone-item {
+    text-align: center;
+    list-style: none;
+
+    a {
+      display: inline-block;
+      font-weight: 600;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover a,
+    &:active a {
+      text-decoration: underline;
+      text-decoration-skip: ink;
+      color: $second-color;
+    }
+
+    &:first-child {
+      margin-bottom: 5px;
+    }
+  }
+}

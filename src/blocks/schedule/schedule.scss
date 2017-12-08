@@ -1,0 +1,29 @@
+// В этом файле должны быть стили для БЭМ-блока schedule, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.schedule {
+  margin-bottom: 50px;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__table {
+    width: 100%;
+    text-align: left;
+  }
+
+  tr > th:first-child,
+  tr > td:first-child {
+    width: 25%;
+  }
+
+  tr > th:last-child,
+  tr > td:last-child {
+    width: 75%;
+  }
+
+  /* &__first-cell,
+  &__schedule__time {
+
+  } */
+}

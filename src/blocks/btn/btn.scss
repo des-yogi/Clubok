@@ -1,0 +1,52 @@
+// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: 12px 50px;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  text-align: center;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  text-decoration: none;
+  text-transform: none;
+  color: $white;
+  background-color: $second-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: $main-color;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active,
+  &:focus {
+    // @include field-focus;
+  }
+
+  &--disabled,
+  &:disabled {
+    // opacity: $opacity;
+    cursor: not-allowed;
+    color: $text-color;
+    background-color: $gray-lightest;
+    // border-color: $gray-lighter;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+}
