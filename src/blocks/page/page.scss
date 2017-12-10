@@ -97,6 +97,21 @@ img {
   height: auto;
 }
 
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.no-scroll {
+   height: 100%;
+   width: 100%;
+   position: fixed;
+   overflow: hidden;
+}
+
 .container {
   @include container (
     $xs-grid-gutter:  $grid-gutter-width, // $grid-gutter-width - default!
@@ -158,4 +173,24 @@ img {
     $columns: $grid-columns,
     $gutter:  20px
   )
+}
+
+.openMenu {
+  animation: openMenu 0.3s ease-out 1;
+  animation-fill-mode: forwards;
+}
+
+.closeMenu {
+  animation: closeMenu 0.3s ease-out 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes openMenu {
+  from { transform: translateY(-100vh); }
+  to { transform: translateY(0); }
+}
+
+@keyframes closeMenu {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100vh); }
 }
