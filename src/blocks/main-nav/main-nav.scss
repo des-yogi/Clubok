@@ -12,45 +12,105 @@
 
   // первый уровень
   &__list {
+    position: relative;
     display: none;
     margin: 0;
     padding: 0;
     list-style: none;
 
     // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
+/*     @media (max-width: ($menu-desktop-width - 1)) {
 
-      // открытие/закрытие меню только в случае работающего JS
+  // открытие/закрытие меню только в случае работающего JS
 
-      .js & {
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.2s;
+  .js & {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+  }
+
+  .js #{$block-name}--open & {
+    max-height: 100vh;
+    transition: max-height 0.6s;
+  }
+} */
+
+    &:after {
+      @media (min-width: $screen-md) {
+        position: absolute;
+        z-index: -1;
+        bottom: -11px;
+        right: -45px;
+        content: "";
+        display: block;
+        width: 65px;
+        height: 30px;
+        background: url(../img/clew.svg) no-repeat center center;
+        background-size: 65px 30px;
       }
+    }
 
-      .js #{$block-name}--open & {
-        max-height: 100vh;
-        transition: max-height 0.6s;
+    &::before {
+      position: absolute;
+      bottom: -38px;
+      right: -19px;
+      content: "Творческая студия любителей рукоделия приглашает Вас";
+      display: block;
+      width: 100%;
+      height: 30px;
+      color: $gray-light;
+
+      @media (min-width: $screen-lg) {
+        right: -89px;
       }
     }
 
     // настольный вид списка
-
-    /* @media (min-width: $menu-desktop-width) {
+    @media (min-width: $screen-md) {
       display: flex;
-      flex-wrap: wrap;
-    } */
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+    }
+
   }
 
   &__item {
-    /* position: relative; */
+    position: relative;
 
-    &--active {
-
-      /* & > #{$block-name}__link {
-        color: #000;
-      } */
+    &::before {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $second-color;
     }
+
+    &:hover::before {
+      background-color: $main-color;
+    }
+
+    &.active::before {
+      background-color: $main-color;
+    }
+
+    &:hover a,
+    &.active a {
+      color: $second-color;
+    }
+
+    @media (min-width: $screen-md) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
   }
 
   &__link {
@@ -58,11 +118,18 @@
 padding: 0.5em;
 text-decoration: none;
 background-color: #fff; */
+    font-size: 15px;
+    font-weight: 600;
 
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: $gray-lightest;
+    }
+
+    @media (min-width: $screen-md) {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $title-color;
     }
   }
 
@@ -74,12 +141,19 @@ background-color: #fff; */
     background: none;
     border: none;
 
-    .no-js & {
-      display: none;
-    }
+/*     .no-js & {
+  display: none;
+} */
 
     @media (min-width: $menu-desktop-width) {
       display: none;
     }
   }
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
 }

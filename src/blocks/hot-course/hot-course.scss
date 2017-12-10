@@ -8,14 +8,45 @@
   $block-name:                &; // #{$block-name}__element
 
   &__item {
-    max-width: 480px;
     margin-bottom: 20px;
 
-    &:hover {
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-    }
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  sm,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  30px
+    )
+
+    @include col (
+      $screen:  lg,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  30px
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  30px
+    )
 
     @media (min-width: $screen-sm) {
+      max-width: 460px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -52,10 +83,14 @@
       height: 50px;
       text-align: center;
     }
+
+    &:hover {
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+    }
   }
 
   &__descr {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-left: 0;
     list-style: none;
 

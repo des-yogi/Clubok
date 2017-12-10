@@ -1,8 +1,9 @@
-// В этом файле должны быть стили для БЭМ-блока contact-us, его элементов, 
+// В этом файле должны быть стили для БЭМ-блока contact-us, его элементов,
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .contact-us {
+  margin-top: 30px;
 
   $block-name:                &; // #{$block-name}__element
 

@@ -6,12 +6,12 @@
 
 -->
 
-<footer class="page-footer" role="contentinfo">
+<footer class="row  page-footer" role="contentinfo">
 
   <section class="logo">
     <a href="/" class="logo__link">
       <img src="img/clubok-logo.svg" alt="Clubok" width="65" height="58">
-      <span>Творческая студия</span>
+      <span class="title-span">Творческая студия <!-- — пространство, где Вы окунетесь в море творчества,  теплую атмосферу, найдете новых  друзей и приобретете полезные навыки. --></span>
     </a>
   </section>
 
@@ -51,27 +51,38 @@
     </ul>
   </section>
 
-  <article class="page-footer__nav  contacts">
+  <article class="page-footer__nav  page-footer__contacts">
     <h2 class="page-footer__title">Контакты</h2>
-    <ul class="page-footer__nav-list">
-      <li class="page-footer__nav-item">
-        <a class="page-footer__nav-link" href="tel:+380443841654">(044) 384-16-54</a>
-        <a class="page-footer__nav-link" href="tel:+380674086327">(067) 408-63-27</a>
+    <ul class="page-footer__nav-list  page-footer__nav-list--address">
+      <li class="page-footer__nav-item  page-footer__nav-item--phone">
+        <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>
+        <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>
       </li>
-      <li class="page-footer__nav-item">
-        <a class="page-footer__nav-link">Киев, ул. Борщаговская, 204, корп.1</a>
+      <li class="page-footer__nav-item  page-footer__nav-item--address">
+        <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>
       </li>
     </ul>
+
+    <article class="social-links">
+      <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram
+        <svg width="26" height="26">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"></use>
+        </svg>
+      </a>
+      <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook
+        <svg width="26" height="26">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use>
+        </svg>
+      </a>
+
+      <div class="contact-us">
+        <button class="btn  contact-us__btn">Написать нам</button>
+      </div>
+
+    </article>
+
   </article>
 
-  <article class="social-links">
-    <a class="social-links__link  social-links__link--insta" href="" title="">Instagram</a>
-    <a class="social-links__link  social-links__link--fb" href="" title="">Facebook</a>
-  </article>
-
-  <div class="contact-us">
-    <button class="contact-us__btn">Написать нам</button>
-  </div>
 
   <section class="copyrights">
     <span>© 2017. Творческая студия “Clubok”</span>

@@ -5,25 +5,104 @@
 .schedule {
   margin-bottom: 50px;
 
+  @include row (
+    $xs-grid-gutter:  0, // $grid-gutter-width - default!
+    $sm-grid-gutter:  0,
+    $md-grid-gutter:  0,
+    $lg-grid-gutter:  0,
+    $xl-grid-gutter:  0
+  );
+
   $block-name:                &; // #{$block-name}__element
 
   &__table {
+    position: relative;
     width: 100%;
     text-align: left;
+
+    &::before {
+
+      @media (min-width: $screen-md) {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        content: "";
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: $gray-lighter;
+      }
+
+      @media (min-width: $screen-xl) {
+        left: -40px;
+      }
+    }
   }
 
   tr > th:first-child,
   tr > td:first-child {
-    width: 25%;
+    width: 20%;
+    padding-bottom: 10px;
+    vertical-align: top;
+  }
+
+  tr > td:first-child {
+    color: $main-color;
   }
 
   tr > th:last-child,
   tr > td:last-child {
-    width: 75%;
+    width: 80%;
+    padding-bottom: 10px;
   }
 
-  /* &__first-cell,
-  &__schedule__time {
+  &__today {
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  20px
+    )
 
-  } */
+    @include col (
+      $screen:  sm,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  20px
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  20px
+    )
+
+    @include col (
+      $screen:  lg,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  20px
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  20px
+    )
+
+    @include col-offset (
+      $screen: md,
+      $column: 1,
+      $columns: $grid-columns
+    )
+
+    @include col-offset (
+      $screen: xl,
+      $column: 2,
+      $columns: $grid-columns
+    )
+  }
+
 }

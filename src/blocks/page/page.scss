@@ -14,6 +14,7 @@
 
   box-sizing: border-box;
   font-size: 14px;
+  font-family: $font-family;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: scrollbar;
   -ms-text-size-adjust: 100%; // stylelint-disable-line  property-no-vendor-prefix
@@ -78,6 +79,10 @@ textarea {
   touch-action: manipulation;
 }
 
+a:hover {
+  text-decoration-skip: ink;
+}
+
 // We love EDGE! This is a browser!
 svg {
 
@@ -93,9 +98,64 @@ img {
 }
 
 .container {
-  @include container;
+  @include container (
+    $xs-grid-gutter:  $grid-gutter-width, // $grid-gutter-width - default!
+    $sm-grid-gutter:  $grid-gutter-width,
+    $md-grid-gutter:  $grid-gutter-width,
+    $lg-grid-gutter:  $grid-gutter-width,
+    $xl-grid-gutter:  $grid-gutter-width
+  );
 }
 
 .row {
-  @include row;
+  @include row (
+    $xs-grid-gutter:  0, // $grid-gutter-width - default!
+    $sm-grid-gutter:  0,
+    $md-grid-gutter:  0,
+    $lg-grid-gutter:  0,
+    $xl-grid-gutter:  0
+  );
+}
+
+.grid-standard {
+  min-height: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $gray-lighter;
+  // border: 1px solid red;
+
+  @include col (
+    $screen:  xs,
+    $column:  $grid-columns,
+    $columns: $grid-columns,
+    $gutter:  20px
+  )
+
+  @include col (
+    $screen:  sm,
+    $column:  6,
+    $columns: $grid-columns,
+    $gutter:  20px
+  )
+
+  @include col (
+    $screen:  md,
+    $column:  4,
+    $columns: $grid-columns,
+    $gutter:  20px
+  )
+
+  @include col (
+    $screen:  lg,
+    $column:  3,
+    $columns: $grid-columns,
+    $gutter:  20px
+  )
+
+  @include col (
+    $screen:  xl,
+    $column:  3,
+    $columns: $grid-columns,
+    $gutter:  20px
+  )
 }
