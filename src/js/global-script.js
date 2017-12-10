@@ -20,3 +20,12 @@
 // ready(function(){
 //   // code
 // });
+
+/*(function () {
+  var burger = document.querySelector('#main-nav-toggler');
+  var mobMenu = document.querySelector('#mobile-menu');
+
+  burger.addEventListener('click', function (e) {
+    mobMenu.classList.remove('hidden');
+  });
+}());*/

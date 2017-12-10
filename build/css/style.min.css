@@ -239,6 +239,15 @@ button svg {
 img {
   max-width: 100%;
   height: auto; }
+.hidden {
+  display: none; }
+.visible {
+  display: block; }
+.no-scroll {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden; }
 .container {
   display: block;
   width: 100%;
@@ -266,6 +275,44 @@ img {
   max-width: 100%;
   padding-left: 10px;
   padding-right: 10px; }
+.openMenu {
+  -webkit-animation: openMenu 0.3s ease-out 1;
+          animation: openMenu 0.3s ease-out 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+.closeMenu {
+  -webkit-animation: closeMenu 0.3s ease-out 1;
+          animation: closeMenu 0.3s ease-out 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+@-webkit-keyframes openMenu {
+  from {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@keyframes openMenu {
+  from {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh); }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@-webkit-keyframes closeMenu {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh); } }
+@keyframes closeMenu {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  to {
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh); } }
 body {
   font-family: "Open Sans", "Helvetica", "Helvetica Neue", "Arial", sans-serif;
   font-size: 14px;
@@ -305,7 +352,7 @@ h2 {
   } */ }
 h3 {
   margin-bottom: 15px;
-  font-size: 16px; }
+  font-size: 18px; }
 h4 {
   font-size: 14px; }
 p,
@@ -377,12 +424,13 @@ blockquote {
         flex-basis: 100%; }
 .page-header__logo {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.66667%;
-            flex: 0 0 16.66667%;
-    max-width: 16.66667%;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%;
     padding-left: 20px;
     padding-right: 20px; }
 .page-header__logo img {
+      max-width: none;
       width: 65px;
       height: 58px; }
 .page-header__nav {
@@ -509,60 +557,30 @@ blockquote {
   position: relative;
   z-index: 10; }
 .main-nav__list {
-    position: relative;
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 94px;
+    width: 100%;
+    height: calc(100vh - 94px);
     margin: 0;
-    padding: 0;
+    padding: 20px 40px;
     list-style: none;
-    /*     @media (max-width: ($menu-desktop-width - 1)) {
-
-  // открытие/закрытие меню только в случае работающего JS
-
-  .js & {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s;
-  }
-
-  .js .main-nav--open & {
-    max-height: 100vh;
-    transition: max-height 0.6s;
-  }
-} */ }
-.main-nav__list::before {
-      position: absolute;
-      bottom: -38px;
-      right: -19px;
-      content: "Творческая студия любителей рукоделия приглашает Вас";
-      display: block;
-      width: 100%;
-      height: 30px;
-      color: #999999; }
+    background-color: white;
+    overflow-y: auto;
+    -webkit-transform: translateY(-100vh);
+            transform: translateY(-100vh); }
 .main-nav__item {
-    position: relative; }
-.main-nav__item::before {
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #015794; }
-.main-nav__item:hover::before {
-      background-color: #E74F3A; }
-.main-nav__item.active::before {
-      background-color: #E74F3A; }
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px; }
 .main-nav__item:hover a,
     .main-nav__item.active a {
       color: #015794; }
 .main-nav__link {
-    /*     display: block;
-padding: 0.5em;
-text-decoration: none;
-background-color: #fff; */
-    font-size: 15px;
-    font-weight: 600; }
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit; }
 .main-nav__link:hover, .main-nav__link:focus {
       text-decoration: none; }
 .main-nav__toggler {
@@ -610,12 +628,12 @@ background-color: #fff; */
 a.btn--disabled {
       pointer-events: none; }
 .temp-icon-left-arrow {
-  background-image: url(../img/sprite-05522682609325806.png);
+  background-image: url(../img/sprite-07687809669651855.png);
   background-position: 0px 0px;
   width: 32px;
   height: 32px; }
 .temp-icon-right-arrow {
-  background-image: url(../img/sprite-05522682609325806.png);
+  background-image: url(../img/sprite-07687809669651855.png);
   background-position: -36px 0px;
   width: 32px;
   height: 32px; }
@@ -1102,11 +1120,17 @@ a.btn--disabled {
     padding-bottom: 10px;
     vertical-align: top; }
 .schedule tr > td:first-child {
+    font-weight: 600;
     color: #E74F3A; }
 .schedule tr > th:last-child,
   .schedule tr > td:last-child {
     width: 80%;
     padding-bottom: 10px; }
+.schedule__course-name {
+    font-weight: 600; }
+.schedule__course-name span {
+      display: block;
+      font-weight: 400; }
 .schedule__today {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -1197,7 +1221,7 @@ a.btn--disabled {
     h2 {
       font-size: 30px; }
     h3 {
-      font-size: 24px; }
+      font-size: 20px; }
     h4 {
       font-size: 18px; }
     p,
@@ -1215,11 +1239,12 @@ a.btn--disabled {
               align-items: flex-start; }
         .page-header__logo img {
           width: 100px;
-          height: 90px; }
+          height: 89px; }
       .page-header__logo {
         padding-right: 0; }
       .page-header__nav {
-        padding-right: 65px; }
+        padding-right: 65px;
+        padding-left: 0; }
       .page-header__burger {
         display: none; }
       .page-header__phone-list {
@@ -1330,7 +1355,17 @@ a.btn--disabled {
         height: 30px;
         background: url(../img/clew.svg) no-repeat center center;
         background-size: 65px 30px; }
+      .main-nav__list::before {
+        position: absolute;
+        bottom: -38px;
+        right: 20px;
+        content: "Творческая студия любителей рукоделия приглашает Вас";
+        display: block;
+        width: auto;
+        height: 30px;
+        color: #999999; }
       .main-nav__list {
+        position: relative;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1338,11 +1373,36 @@ a.btn--disabled {
             flex-wrap: nowrap;
         -webkit-box-pack: end;
             -ms-flex-pack: end;
-                justify-content: flex-end; }
+                justify-content: flex-end;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        top: inherit;
+        left: inherit;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        overflow-y: visible; }
+      .main-nav__item::before {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #015794; }
+      .main-nav__item:hover::before {
+        background-color: #E74F3A; }
+      .main-nav__item.active::before {
+        background-color: #E74F3A; }
       .main-nav__item {
         padding-left: 20px;
-        padding-right: 20px; }
+        padding-right: 20px;
+        padding-top: 0;
+        padding-bottom: 0; }
       .main-nav__link {
+        font-size: 15px;
         text-decoration: none;
         text-transform: uppercase;
         color: #1a1a1a; }
@@ -1430,8 +1490,8 @@ a.btn--disabled {
       /* a:not([data-name=hidden]), address {
       font-size: 15px;
     } */ }
-        .main-nav__list::before {
-          right: -89px; }
+      .main-nav__list::before {
+        right: 30px; }
       .main-nav__item {
         padding-left: 30px;
         padding-right: 30px; }
@@ -1506,7 +1566,7 @@ a.btn--disabled {
     h2 {
       font-size: 30px; }
     h3 {
-      font-size: 24px; }
+      font-size: 22px; }
     h4 {
       font-size: 18px; }
       .page-footer .logo {

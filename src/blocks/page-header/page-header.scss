@@ -21,18 +21,19 @@
   &__logo {
     @include col (
       $screen:  xs,
-      $column:  2,
+      $column:  3,
       $columns: $grid-columns,
       $gutter:  $grid-gutter-width
     )
 
     img {
+      max-width: none;
       width: 65px;
       height: 58px;
 
       @media (min-width: $screen-md) {
         width: 100px;
-        height: 90px;
+        height: 89px;
       }
     }
 
@@ -57,6 +58,7 @@
 
     @media (min-width: $screen-md) {
       padding-right: 65px;
+      padding-left: 0;
     }
   }
 

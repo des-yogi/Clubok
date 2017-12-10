@@ -12,28 +12,21 @@
 
   // первый уровень
   &__list {
-    position: relative;
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 94px;
+    // top: 94px;
+    width: 100%;
+    $height: calc(100vh - 94px);
+    height: $height;
     margin: 0;
-    padding: 0;
+    padding: 20px 40px;
     list-style: none;
-
-    // мобильный вид списка
-/*     @media (max-width: ($menu-desktop-width - 1)) {
-
-  // открытие/закрытие меню только в случае работающего JS
-
-  .js & {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.2s;
-  }
-
-  .js #{$block-name}--open & {
-    max-height: 100vh;
-    transition: max-height 0.6s;
-  }
-} */
+    background-color: $white;
+    overflow-y: auto;
+    transform: translateY(-100vh);
+    // animation: openMenu 1s ease-in 1;
+    // animation-fill-mode: both;
 
     &:after {
       @media (min-width: $screen-md) {
@@ -51,49 +44,68 @@
     }
 
     &::before {
-      position: absolute;
-      bottom: -38px;
-      right: -19px;
-      content: "Творческая студия любителей рукоделия приглашает Вас";
-      display: block;
-      width: 100%;
-      height: 30px;
-      color: $gray-light;
+      @media (min-width: $screen-md) {
+        position: absolute;
+        bottom: -38px;
+        right: 20px;
+        content: "Творческая студия любителей рукоделия приглашает Вас";
+        display: block;
+        width: auto;
+        height: 30px;
+        color: $gray-light;
+      }
 
       @media (min-width: $screen-lg) {
-        right: -89px;
+        right: 30px;
       }
     }
 
     // настольный вид списка
     @media (min-width: $screen-md) {
+      position: relative;
       display: flex;
       flex-wrap: nowrap;
       justify-content: flex-end;
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      top: inherit;
+      left: inherit;
+      transform: translateY(0);
+      overflow-y: visible;
     }
 
   }
 
   &__item {
     position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     &::before {
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: $second-color;
+      @media (min-width: $screen-md) {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $second-color;
+      }
     }
 
     &:hover::before {
-      background-color: $main-color;
+      @media (min-width: $screen-md) {
+        background-color: $main-color;
+      }
     }
 
     &.active::before {
-      background-color: $main-color;
+      @media (min-width: $screen-md) {
+        background-color: $main-color;
+      }
     }
 
     &:hover a,
@@ -104,6 +116,8 @@
     @media (min-width: $screen-md) {
       padding-left: 20px;
       padding-right: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     @media (min-width: $screen-lg) {
@@ -114,12 +128,10 @@
   }
 
   &__link {
-/*     display: block;
-padding: 0.5em;
-text-decoration: none;
-background-color: #fff; */
-    font-size: 15px;
+    font-size: 22px;
     font-weight: 600;
+    text-decoration: none;
+    color: inherit;
 
     &:hover,
     &:focus {
@@ -127,6 +139,7 @@ background-color: #fff; */
     }
 
     @media (min-width: $screen-md) {
+      font-size: 15px;
       text-decoration: none;
       text-transform: uppercase;
       color: $title-color;
