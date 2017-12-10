@@ -31,6 +31,7 @@ $border-color:                $text-muted-color;
 // Базовая типографика
 
 $font-family:                 'Open Sans', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family-title:            'Montserrat', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
 $font-size:                   14px;
 $line-height:                 1.5;
 
@@ -55,7 +56,7 @@ $container-xl:                $screen-xl - 20;
 // Модульная сетка
 
 $grid-columns:                12;
-$grid-gutter-width:           20px;
+$grid-gutter-width:           40px;
 
 
 

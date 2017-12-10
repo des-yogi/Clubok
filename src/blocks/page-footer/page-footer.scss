@@ -7,33 +7,302 @@
 }
 
 .page-footer {
+  padding-top: 35px;
+  padding-bottom: 25px;
 
   $block-name:                &; // #{$block-name}__element
 
   .logo {
+    margin-bottom: 30px;
 
     @include col (
       $screen:  xs,
       $column:  $grid-columns,
       $columns: $grid-columns,
-      $gutter:  $grid-gutter-width
-    );
+      $gutter:  0
+    )
 
-    @media (min-width: $screen-md) {
+    @include col (
+      $screen:  md,
+      $column:  2,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
 
-      @include col (
-        $screen:  md,
-        $column:  3,
-        $columns: $grid-columns,
-        $gutter:  $grid-gutter-width
-      );
+    @include col (
+      $screen:  xl,
+      $column:  3,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    span {
+      display: none;
+
+      @media (min-width: $screen-xl) {
+        font-size: 15px;
+      }
+    }
+
+    .title-span {
+      @media (min-width: $screen-md) {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 12px;
+      }
+
+      @media (min-width: $screen-xl) {
+        /* width: 280px;
+        height: 200px; */
+      }
+    }
+
+    /* .text-span {
+      @media (min-width: $screen-xl) {
+        display: inline;
+      }
+    } */
+
+    &__link {
+
+      img {
+        @media (min-width: $screen-md) {
+          width: 90px;
+          height: 80px;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        text-decoration: none;
+        color: currentColor;
+      }
+
+      @media (min-width: $screen-xl) {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
 
     }
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    font-family: $font-family-title;
+    font-size: 16px;
+    font-weight: 700;
+    color: $second-color;
   }
 
   .logo__link {
     display: flex;
     flex-direction: column;
+  }
 
+  .page-footer__nav + .page-footer__nav {
+    margin-top: 30px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 0;
+    }
+  }
+
+  &__nav-list {
+    padding-left: 0;
+    list-style: none;
+
+    &--address {
+      @media (min-width: $screen-md) {
+        width: 45%;
+      }
+
+      @media (min-width: $screen-xl) {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__nav-item {
+    margin-bottom: 5px;
+    pointer-events: auto;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--phone,
+    &--address {
+      position: relative;
+      padding-left: 30px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 17px;
+        // background-color: red;
+      }
+    }
+
+    &--phone {
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__nav-item--phone {
+    display: flex;
+    justify-content: flex-start;
+
+    &::before {
+      background: transparent url(../img/phone.svg) no-repeat left center;
+      background-size: 15px 15px;
+    }
+  }
+
+  &__nav-item--address {
+    background: transparent url(../img/pin.svg) no-repeat left center;
+    background-size: 12px 17px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 20px;
+    }
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+      color: $second-color;
+    }
+
+    &.active {
+      text-decoration: underline;
+      color: $second-color;
+    }
+  }
+
+  &__nav-link--phone {
+
+    &:last-child {
+      margin-left: 30px;
+
+      @media (min-width: $screen-md) {
+        margin-left: 0;
+        margin-top: 5px;
+      }
+    }
+
+  }
+
+  &__courses,
+  &__master-class {
+
+    @include col (
+      $screen:  md,
+      $column:  4,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  3,
+      $columns: $grid-columns,
+      $gutter:  20px
+    )
+
+    @include col-offset (
+      $screen: md,
+      $column: 1,
+      $columns: $grid-columns
+    )
+
+    @include col-offset (
+      $screen: xl,
+      $column: 0,
+      $columns: $grid-columns
+    )
+  }
+
+  &__contacts {
+
+    @include col (
+      $screen:  md,
+      $column:  9,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  3,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col-offset (
+      $screen: md,
+      $column: 3,
+      $columns: $grid-columns
+    )
+
+    @include col-offset (
+      $screen: xl,
+      $column: 0,
+      $columns: $grid-columns
+    )
+
+    h2 {
+      @media (min-width: $screen-md) {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 30px !important;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 0 !important;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    max-width: $screen-sm;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $screen-md) {
+    max-width: none;
+    margin-left: init;
+    margin-right: init;
+  }
+
+  @media (min-width: $screen-lg) {
+    /* a:not([data-name=hidden]), address {
+      font-size: 15px;
+    } */
   }
 }

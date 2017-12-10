@@ -193,8 +193,8 @@ $grid-gutter-width:           20px !default;
   // ВНИМАНИЕ!
   // если $gutter == false, в CSS не попадут правила padding-left и padding-right
   @if ($gutter != false) {
-    padding-left: ($gutter / 2);
-    padding-right: ($gutter / 2);
+    padding-left: ($gutter / 2); // было padding
+    padding-right: ($gutter / 2); // было padding
   }
 }
 

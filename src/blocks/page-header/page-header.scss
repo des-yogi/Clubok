@@ -10,17 +10,35 @@
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-bottom: 2px solid $second-color;
+  border-bottom: 1px solid $second-color;
+
+  @media (min-width: $screen-md) {
+    align-items: flex-start;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
   &__logo {
     @include col (
       $screen:  xs,
-      $column:  3,
+      $column:  2,
       $columns: $grid-columns,
       $gutter:  $grid-gutter-width
     )
+
+    img {
+      width: 65px;
+      height: 58px;
+
+      @media (min-width: $screen-md) {
+        width: 100px;
+        height: 90px;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      padding-right: 0;
+    }
   }
 
   &__nav {
@@ -29,17 +47,26 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
     @include col (
       $screen:  xs,
       $column:  9,
       $columns: $grid-columns,
       $gutter:  $grid-gutter-width
     )
+
+    @media (min-width: $screen-md) {
+      padding-right: 65px;
+    }
   }
 
   &__burger {
     margin-left: 0;
     margin-right: 0;
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
   }
 
   // flex-shrink: 1;
@@ -47,6 +74,18 @@
   &__phone-list {
     width: calc(100% - 60px);
     padding-left: 0;
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding-right: 20px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding-right: 30px;
+    }
   }
 
   &__phone-item {
@@ -58,6 +97,10 @@
       font-weight: 600;
       text-decoration: none;
       color: inherit;
+
+      @media (min-width: $screen-md) {
+        font-size: 14px;
+      }
     }
 
     &:hover a,
@@ -69,6 +112,11 @@
 
     &:first-child {
       margin-bottom: 5px;
+
+      @media (min-width: $screen-md) {
+        margin-bottom: 0;
+        margin-right: 25px;
+      }
     }
   }
 }
