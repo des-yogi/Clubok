@@ -1,0 +1,59 @@
+// В этом файле должны быть стили для БЭМ-блока other-courses, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.other-courses {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    position: relative;
+    list-style: none;
+    padding-left: 30px;
+    color: $second-color;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: $main-color;
+    }
+
+    @include col-offset (
+      $screen: md,
+      $column: 1,
+      $columns: $grid-columns
+    )
+  }
+
+  li + li {
+    margin-top: 20px;
+  }
+
+  li:last-child {
+    margin-top: 50px;
+    font-size: 18px;
+    color: $main-color;
+  }
+
+  a {
+    font-weight: 800;
+    text-decoration: none;
+    color: currentColor;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    display: block;
+    font-weight: 400;
+    color: $text-color;
+  }
+
+}

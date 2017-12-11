@@ -1,0 +1,74 @@
+// В этом файле должны быть стили для БЭМ-блока contact-form, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.contact-form {
+
+  $block-name:                &; // #{$block-name}__element
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 800;
+    color: $text-color;
+  }
+
+  label[for=user-message] {
+    margin-bottom: 20px;
+  }
+
+  span {
+    display: block;
+    visibility: hidden;
+  }
+
+  input {
+    width: 80%;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid $gray-lighter;
+
+    @media (min-width: $screen-sm) {
+      width: 40%;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid $gray-lighter;
+    background-color: $gray-lightest;
+
+    @media (min-width: $screen-lg) {
+      max-width: 554px;
+    }
+
+    @media (min-width: $screen-lg) {
+      max-width: 770px;
+    }
+  }
+
+  input:hover,
+  textarea:hover,
+  input:focus,
+  textarea:focus {
+    border-color: $second-color;
+    background-color: $white;
+    outline: none;
+  }
+
+  button {
+    border: none;
+  }
+
+  &__field-wrapper {
+
+    &--btn {
+      text-align: left;
+    }
+  }
+
+}

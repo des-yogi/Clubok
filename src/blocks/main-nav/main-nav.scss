@@ -23,6 +23,10 @@
     padding: 20px 40px;
     list-style: none;
     background-color: $white;
+    background-image: url(../img/heart.png);
+    background-repeat: no-repeat;
+    background-size: 161px 130px;
+    background-position: 80% 80%;
     overflow-y: auto;
     transform: translateY(-100vh);
     // animation: openMenu 1s ease-in 1;
@@ -72,6 +76,7 @@
       margin: 0;
       top: inherit;
       left: inherit;
+      background: none;
       transform: translateY(0);
       overflow-y: visible;
     }

@@ -9,6 +9,7 @@
 
   &__item {
     margin-bottom: 20px;
+    background-color: $white;
 
     @include col (
       $screen:  xs,
@@ -44,6 +45,15 @@
       $columns: $grid-columns,
       $gutter:  30px
     )
+
+    &--courses {
+      @include col (
+        $screen:  xl,
+        $column:  3,
+        $columns: $grid-columns,
+        $gutter:  30px
+      )
+    }
 
     @media (min-width: $screen-sm) {
       max-width: 460px;

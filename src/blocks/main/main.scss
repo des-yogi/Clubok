@@ -1,0 +1,34 @@
+// В этом файле должны быть стили для БЭМ-блока main, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+/*   padding-top: 50px;
+background-image: url(../img/bobbin.png),
+                  url(../img/heart.png);
+background-repeat: no-repeat;
+background-size: 92px 99px,
+                 161px 130px;
+background-position: 1% 120px,
+                     120% 470px;
+background-attachment: fixed;
+
+@media (min-height: $screen-md) {
+  background-image: url(../img/bobbin.png),
+                    url(../img/heart.png),
+                    url(../img/button.png);
+  background-repeat: no-repeat;
+  background-size: 92px 99px,
+                   161px 130px,
+                   99px 93px;
+  background-position: 1% 150px,
+                       50% 570px,
+                       97% 85px;
+  background-attachment: fixed;
+} */
+
+  $block-name:                &; // #{$block-name}__element
+
+}
