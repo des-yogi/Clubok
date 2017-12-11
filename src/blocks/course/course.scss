@@ -1,0 +1,226 @@
+// В этом файле должны быть стили для БЭМ-блока course, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.course {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__intro {
+    margin-bottom: 20px;
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  sm,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  lg,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  6,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+  }
+
+  &__descr {
+
+    @include col (
+      $screen:  xs,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  sm,
+      $column:  $grid-columns,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  md,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  lg,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col (
+      $screen:  xl,
+      $column:  5,
+      $columns: $grid-columns,
+      $gutter:  0
+    )
+
+    @include col-offset (
+      $screen: md,
+      $column: 1,
+      $columns: $grid-columns
+    )
+
+    @include col-offset (
+      $screen: lg,
+      $column: 1,
+      $columns: $grid-columns
+    )
+
+    @include col-offset (
+      $screen: xl,
+      $column: 1,
+      $columns: $grid-columns
+    )
+  }
+
+  &__img-wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__invite {
+    margin-top: 25px;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__invite-item {
+    margin-bottom: 10px;
+
+    &--link {
+      color: $second-color;
+
+      a {
+        text-decoration: none;
+        color: currentColor;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: $main-color;
+      }
+
+      svg {
+        display: inline-block;
+        fill: currentColor;
+        transform: translate(5px, 7px);
+      }
+    }
+  }
+
+  &__descr-list {
+    margin-bottom: 30px;
+    padding-left: 0;
+    list-style: none;
+
+    li > span {
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+
+  &__action {
+    margin-bottom: 30px;
+  }
+
+  &__action-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $main-color;
+  }
+
+  &__action-date {
+    font-weight: 800;
+  }
+
+  &__action-discount {
+    font-weight: 800;
+    color: $main-color;
+  }
+
+  &__price {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    color: $main-color;
+  }
+
+  &__contacts {
+    margin-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid $main-color;
+    border-bottom: 1px solid $main-color;
+
+    ul {
+      width: auto;
+      margin-bottom: 0;
+    }
+
+    li {
+      margin-bottom: 15px;
+    }
+
+    li:last-child {
+        margin-bottom: 0;
+        padding-left: 30px;
+
+        a {
+          text-decoration: none;
+          color: $second-color;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+  }
+
+  &__btn-wrapper {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  &__enroll {
+    border: none;
+  }
+
+}

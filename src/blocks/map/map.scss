@@ -1,0 +1,63 @@
+// В этом файле должны быть стили для БЭМ-блока map, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.map {
+  margin-bottom: 40px;
+
+  @include col (
+    $screen:  xs,
+    $column:  $grid-columns,
+    $columns: $grid-columns,
+    $gutter:  0
+  )
+
+  @include col (
+    $screen:  sm,
+    $column:  $grid-columns,
+    $columns: $grid-columns,
+    $gutter:  0
+  )
+
+  @include col (
+    $screen:  md,
+    $column:  $grid-columns,
+    $columns: $grid-columns,
+    $gutter:  0
+  )
+
+  @include col (
+    $screen:  lg,
+    $column:  7,
+    $columns: $grid-columns,
+    $gutter:  20px
+  )
+
+  @include col (
+    $screen:  xl,
+    $column:  8,
+    $columns: $grid-columns,
+    $gutter:  20px
+  )
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    height: 300px;
+    margin-left: -20px;
+    margin-right: -20px;
+
+    iframe {
+      height: 100%;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 450px;
+    }
+
+    @media (min-width: $screen-xl) {
+      height: 500px;
+    }
+  }
+
+}

@@ -29,7 +29,15 @@
     "about": [],
     "hot-course": [],
     "schedule": [],
-    "calendar": []
+    "calendar": [],
+    "main": [],
+    "course": [],
+    "program": [],
+    "other-courses": [],
+    "gallery": [],
+    "contacts": [],
+    "contact-form": [],
+    "map": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
