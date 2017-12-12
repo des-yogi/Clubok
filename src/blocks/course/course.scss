@@ -124,11 +124,11 @@
     margin-bottom: 10px;
 
     &--link {
-      color: $second-color;
+      color: $main-color;
 
       a {
         text-decoration: none;
-        color: currentColor;
+        color: $second-color;
       }
 
       a:hover {
@@ -221,6 +221,14 @@
 
   &__enroll {
     border: none;
+  }
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 70px;
   }
 
 }

@@ -6,24 +6,43 @@
 
 (Нужно убрать пробел между символами @)
 Подробнее: https://www.npmjs.com/package/gulp-file-include
+-->
 
-
-
-<div id="modal-demo" class="modal" tabindex="-1" role="dialog">
+<div id="modal-enroll" class="modal" tabindex="-1" role="dialog">
   <div class="modal__dialog" role="document">
     <div class="modal__content">
       <div class="modal__header">
         <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
-        <h4 class="modal__title">Modal</h4>
+        <h4 class="modal__title">Хочу записаться!</h4>
       </div>
       <div class="modal__body">
-        <p>Далеко-далеко за словесными горами...</p>
+        <form id="modal__enroll-form" class="modal__enroll-form" action="modal_submit" method="get" accept-charset="utf-8">
+          <p>
+            <label for="user-name">Имя</label><br>
+            <input id="user-name" type="text" name="user-name" value="" placeholder="*&thinsp;Обязательно для заполнения" required>
+            <span class="error-message"></span>
+          </p>
+          <p>
+            <label for="user-phone">Телефон</label><br>
+            <input id="user-phone" type="tel" name="user-phone" value="" placeholder="*&thinsp;Обязательно для заполнения" required>
+            <span class="error-message"></span>
+          </p>
+          <p>
+            <label for="user-email">Email</label><br>
+            <input id="user-email" type="email" name="user-email" value="">
+            <span class="error-message"></span>
+          </p>
+          <p>
+            <label for="user-message">Ваше сообщение</label><br>
+            <textarea id="user-message" type="text" name="user-message"></textarea>
+            <span class="error-message"></span>
+          </p>
+        </form>
       </div>
       <div class="modal__footer">
-        <button type="button" class="btn" data-dismiss="modal">Закрыть</button>
+        <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->
+        <button form="modal__enroll-form" type="submit" class="btn">Записаться</button>
       </div>
     </div>
   </div>
 </div>
-
--->

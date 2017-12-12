@@ -6,6 +6,22 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  form {
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      // align-items: flex-start;
+    }
+  }
+
+  fieldset {
+    @media (min-width: $screen-xl) {
+      width: 50%;
+    }
+  }
+
   label {
     display: block;
     margin-bottom: 5px;
@@ -15,7 +31,12 @@
   }
 
   label[for=user-message] {
+    margin-top: 25px;
     margin-bottom: 20px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 0;
+    }
   }
 
   span {
@@ -31,7 +52,19 @@
     border-bottom: 1px solid $gray-lighter;
 
     @media (min-width: $screen-sm) {
+      width: 60%;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 50%;
+    }
+
+    @media (min-width: $screen-lg) {
       width: 40%;
+    }
+
+    @media (min-width: $screen-xl) {
+      width: 60%;
     }
   }
 
@@ -43,10 +76,10 @@
     background-color: $gray-lightest;
 
     @media (min-width: $screen-lg) {
-      max-width: 554px;
+      max-width: 540px;
     }
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-xl) {
       max-width: 770px;
     }
   }
@@ -60,6 +93,12 @@
     outline: none;
   }
 
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
   button {
     border: none;
   }
@@ -68,7 +107,12 @@
 
     &--btn {
       text-align: left;
+
+      @media (min-width: $screen-xl) {
+        padding-top: 10px;
+      }
     }
+
   }
 
 }

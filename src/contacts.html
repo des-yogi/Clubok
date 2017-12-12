@@ -28,7 +28,7 @@
 
           <section class="map">
             <div class="map__wrapper">
-              <iframe src="https://snazzymaps.com/embed/34527" width="100%" height="300" style="border:none;"></iframe>
+              <iframe src="https://snazzymaps.com/embed/34527" width="100%" height="570px" style="border:none;"></iframe>
             </div>
 
           </section>
@@ -68,29 +68,33 @@
           <h2 class="contact-form__title">Задать вопрос</h2>
 
           <form id="contact-form" action="" method="" name="contact-form">
-            <p class="contact-form__field-wrapper">
-              <label for="user-name">Имя</label>
-              <input id="user-name" type="text" name="user-name" value="">
-              <span class="error-message">!error message</span>
-            </p>
-            <p class="contact-form__field-wrapper">
-              <label for="user-phone">Телефон</label>
-              <input id="user-phone" type="tel" name="user-phone" value="">
-              <span class="error-message">!error message</span>
-            </p>
-            <p class="contact-form__field-wrapper">
-              <label for="user-email">Email</label>
-              <input id="user-email" type="tel" name="user-email" value="">
-              <span class="error-message">!error message</span>
-            </p>
-            <p class="contact-form__field-wrapper">
-              <label for="user-message">Ваше сообщение</label>
-              <textarea id="user-message" name="user-message" placeholder="Введите сообщение"></textarea>
-              <span class="error-message">!error message</span>
-            </p>
-            <p class="contact-form__field-wrapper  contact-form__field-wrapper--btn">
-              <button class="btn" type="submit">Отправить</button>
-            </p>
+            <fieldset class="contact-form__user-info">
+              <p class="contact-form__field-wrapper">
+                <label for="user-name">Имя</label>
+                <input id="user-name" type="text" name="user-name" value="">
+                <span class="error-message">!error message</span>
+              </p>
+              <p class="contact-form__field-wrapper">
+                <label for="user-phone">Телефон</label>
+                <input id="user-phone" type="tel" name="user-phone" value="">
+                <span class="error-message">!error message</span>
+              </p>
+              <p class="contact-form__field-wrapper">
+                <label for="user-email">Email</label>
+                <input id="user-email" type="tel" name="user-email" value="">
+                <span class="error-message">!error message</span>
+              </p>
+            </fieldset>
+            <fieldset class="contact-form__user-message">
+              <p class="contact-form__field-wrapper">
+                <label for="user-message">Ваше сообщение</label>
+                <textarea id="user-message" name="user-message" placeholder="Введите сообщение"></textarea>
+                <span class="error-message">!error message</span>
+              </p>
+              <p class="contact-form__field-wrapper  contact-form__field-wrapper--btn">
+                <button class="btn" type="submit">Отправить</button>
+              </p>
+            </fieldset>
           </form>
         </article>
 
@@ -105,6 +109,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/modal/modal.html')
 
   @@include('_include/page_bottom.html')
 </body>

@@ -2,9 +2,6 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
-$font-family--headings:       $font-family !default;
-
 $font-size--h4:               1.25em !default;
 
 $line-height:                 1.375em !default;
@@ -45,7 +42,7 @@ $z-index-modal:               100 !default;
     width: 100%;
     height: 100%;
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       width: 600px;
       height: auto;
 
@@ -53,6 +50,15 @@ $z-index-modal:               100 !default;
         animation: modal-content-show $transition-time 1 both;
       }
     }
+
+    /* @media (min-width: $screen-lg) {
+      width: 600px;
+      height: auto;
+
+      #{$block-name}--open & {
+        animation: modal-content-show $transition-time 1 both;
+      }
+    } */
   }
 
   &__content {
@@ -61,6 +67,7 @@ $z-index-modal:               100 !default;
     flex-direction: column;
     min-width: 100%;
     min-height: 100%;
+    padding: 20px 30px;
     background-color: #fff;
     outline: 0;
   }
@@ -68,12 +75,13 @@ $z-index-modal:               100 !default;
   &__header {
     padding: 5px 40px 0 10px;
     flex-shrink: 0;
+    margin-bottom: 20px;
   }
 
   &__title {
     margin-top: ($line-height / 2);
     margin-bottom: ($line-height / 2);
-    font-size: $font-size--h4;
+    font-size: 20px;
     line-height: 1.4;
     font-weight: 700;
     color: currentColor;
@@ -81,8 +89,8 @@ $z-index-modal:               100 !default;
 
   &__close {
     position: absolute !important; // stylelint-disable-line  declaration-no-important
-    top: 5px;
-    right: 5px;
+    top: 20px;
+    right: 20px;
   }
 
   &__body {
@@ -93,6 +101,11 @@ $z-index-modal:               100 !default;
   &__footer {
     padding: 10px;
     flex-shrink: 0;
+    text-align: center;
+
+    button[type=submit] {
+      border: none;
+    }
   }
 
   &__backdrop {
@@ -111,10 +124,50 @@ $z-index-modal:               100 !default;
 
   &--open {
 
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-md) {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+   /*  @media (min-width: $screen-lg) {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   } */
+  }
+
+  &__enroll-form {
+
+    label {
+      display: inline-block;
+      margin-bottom: 2px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      height: 30px;
+      padding-left: 10px;
+      font-size: 12px;
+
+      @media (min-width: $screen-sm) {
+        width: 85%;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 50px;
+
+      @media (min-width: $screen-sm) {
+        width: 85%;
+      }
+    }
+
+    p + p {
+      margin-top: 10px;
     }
   }
 }

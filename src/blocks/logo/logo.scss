@@ -3,9 +3,49 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .logo {
+  display: flex;
+  flex-wrap: wrap;
+  // white-space: nowrap;
 
   $block-name:                &; // #{$block-name}__element
 
-  display: block;
-  white-space: nowrap;
+  &__link {
+    // width: 25%;
+
+    @media (min-width: $screen-sm) {
+      width: 25%;
+    }
+
+    @media (min-width: $screen-md) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    flex-direction: column;
+  }
+
+}
+
+.logo__bottom-text {
+  display: none;
+
+  @media (min-width: $screen-sm) {
+    display: block !important;
+    width: 75%;
+    padding-left: 5px;
+    font-size: 12px;
+    hyphens: auto;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }

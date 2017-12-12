@@ -60,7 +60,11 @@
       }
 
       @media (min-width: $screen-lg) {
-        right: 30px;
+        right: 35px;
+      }
+
+      @media (min-width: $screen-xl) {
+        right: 45px;
       }
     }
 
@@ -126,8 +130,13 @@
     }
 
     @media (min-width: $screen-lg) {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 45px;
+      padding-right: 45px;
     }
 
   }

@@ -35,7 +35,8 @@
               <ul class="course__invite">
                 <li class="course__invite-item"><strong>Возьмите с собой друзей!</strong></li>
                 <li class="course__invite-item  course__invite-item--link">
-                  <a href=""><strong>Расскажите о событии:</strong>&nbsp;
+                  <strong>Расскажите о событии:</strong>&nbsp;
+                  <a href="">
                     <svg width="26" height="26">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"></use>
                     </svg>
@@ -82,7 +83,7 @@
             </div>
 
             <p class="course__btn-wrapper">
-              <button class="btn  course__enroll">Записаться</button>
+              <button class="btn  course__enroll" data-toggle="modal" data-target="#modal-enroll">Записаться</button>
             </p>
 
           </section>
@@ -90,7 +91,9 @@
         </article>
 
         <article class="program">
+
           <h2 class="program__title">Программа курса</h2>
+
           <section class="program__lesson">
             <h3 class="program__lesson-title">Урок 1: Первая работа с ниткой и иголкой</h3>
             <span class="program__durability">2 часа</span>
@@ -129,6 +132,46 @@
               </div>
             </div>
           </section>
+
+          <section class="program__lesson">
+            <h3 class="program__lesson-title">Урок 2: Работа без нитки и иголки :)</h3>
+            <span class="program__durability">2 часа</span>
+            <p class="program__para">На данном уроке вы научитель основным правилам безопасности при работе с иглами, какие бывают иглы и т.п. На данном уроке вы научитель основным правилам безопасности при работе  с иглами, какие бывают иглы и т.п. На данном уроке вы научитель основным правилам безопасности при работе с иглами, какие бывают иглы и т.п.</p>
+            <ul class="program__list  styled">
+              <li class="program__item">Основные виды ручных стежков и строчек;</li>
+              <li class="program__item">Обработка изделий – тесьмой, обтачкой, косой бейкой, подшивочным швом и т.д.</li>
+              <li class="program__item">Виды подхватов и секреты их выполнения</li>
+              <li class="program__item">Подхваты для штор своими руками.</li>
+            </ul>
+
+            <div class="row gallery">
+              <div class="gallery__unit">
+                <img src="img/gal-image-01.jpg" alt="Img" width="260" height="181">
+              </div>
+              <div class="gallery__unit">
+                <img src="img/gal-image-02.jpg" alt="Img" width="260" height="181">
+              </div>
+              <div class="gallery__unit">
+                <img src="img/gal-image-03.jpg" alt="Img" width="260" height="181">
+              </div>
+              <div class="gallery__unit">
+                <img src="img/gal-image-04.jpg" alt="Img" width="260" height="181">
+              </div>
+              <div class="gallery__unit">
+                <img src="img/gal-image-01.jpg" alt="Img" width="260" height="181">
+              </div>
+              <div class="gallery__unit">
+                <img src="img/gal-image-02.jpg" alt="Img" width="260" height="181">
+              </div>
+              <div class="gallery__unit">
+                <img src="img/gal-image-03.jpg" alt="Img" width="260" height="181">
+              </div>
+              <div class="gallery__unit">
+                <img src="img/gal-image-04.jpg" alt="Img" width="260" height="181">
+              </div>
+            </div>
+          </section>
+
         </article>
 
         <aside class="other-courses">
@@ -163,6 +206,8 @@
     </div>
 
   </div>
+
+  @@include('blocks/modal/modal.html')
 
   @@include('_include/page_bottom.html')
 </body>
