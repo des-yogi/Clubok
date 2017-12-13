@@ -12,7 +12,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff"></head>
-<body>
+<body class="body__courses">
   <div class="page__inner">
     <div class="page__content">
       <div class="container">
@@ -60,32 +60,63 @@
       <main class="container main" role="main">
         <h1>Курсы</h1>
           <article class="category-filter">
-            <h2 class="category-filter__title">Категории</h2>
+            <h2 class="visually-hidden">Фильтр по категориям</h2>
             <form class="category-filter__form" action="" method="" name="category-filter">
-              <span class="category-filter__input-wrapper">
-                <input id="cat-01" type="checkbox" name="" value="">
-                <label for="cat-01">Категория: Название</label>
-              </span>
-              <span class="category-filter__input-wrapper">
-                <input id="cat-02" type="checkbox" name="" value="">
-                <label for="cat-02">Категория: Название</label>
-              </span>
-              <span class="category-filter__input-wrapper">
-                <input id="cat-03" type="checkbox" name="" value="">
-                <label for="cat-03">Категория: Название</label>
-              </span>
-              <span class="category-filter__input-wrapper">
-                <input id="cat-04" type="checkbox" name="" value="">
-                <label for="cat-04">Категория: Название</label>
-              </span>
-              <span class="category-filter__input-wrapper">
-                <input id="cat-05" type="checkbox" name="" value="">
-                <label for="cat-05">Категория: Название</label>
-              </span>
-              <p>
-                <button type="reset">Очистить</button>
-                <button type="submit">Применить</button>
-              </p>
+              <fieldset class="category-filter__fieldset">
+                <legend class="category-filter__title">Выбор категории</legend>
+                <div class="category-filter__fieldset-inner">
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-01" type="checkbox" name="" value="">
+                    <label for="cat-01">Категория: Название</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-02" type="checkbox" name="" value="">
+                    <label for="cat-02">Категория: Название</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-03" type="checkbox" name="" value="">
+                    <label for="cat-03">Категория: Название</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-04" type="checkbox" name="" value="">
+                    <label for="cat-04">Категория: Название</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-05" type="checkbox" name="" value="">
+                    <label for="cat-05">Категория: Название</label>
+                  </span>
+                </div>
+                <p class="category-filter__btn-wrapper">
+                  <button class="btn" type="reset">Очистить</button>
+                  <button class="btn" type="submit">Применить</button>
+                </p>
+              </fieldset>
+            </form>
+          </article>
+          <article class="master-class-filter">
+            <h2 class="visually-hidden">Фильтр по мастер-классам</h2>
+            <form class="category-filter__form" action="" method="" name="category-filter">
+              <fieldset class="category-filter__fieldset">
+                <legend class="category-filter__title">Выбор мастер-класса</legend>
+                <div class="category-filter__fieldset-inner">
+                  <span class="category-filter__input-wrapper">
+                    <input id="nearest-mclass" type="checkbox" name="nearest-mclass" value="">
+                    <label for="nearest-mclass">Ближайшие</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="popular-mclass" type="checkbox" name="popular-mclass" value="">
+                    <label for="popular-mclass">Популярные</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="date-of-mclass" type="checkbox" name="date-of-mclass" value="">
+                    <label for="date-of-mclass">По дате</label>
+                  </span>
+                </div>
+                <p class="category-filter__btn-wrapper">
+                  <button class="btn" type="reset">Очистить</button>
+                  <button class="btn" type="submit">Применить</button>
+                </p>
+              </fieldset>
             </form>
           </article>
           <article class="row  hot-course  courses">
@@ -338,121 +369,7 @@
       </main>
     </div>
     <div class="page-footer-wrapper">
-      <div class="container">
-        <footer class="row  page-footer" role="contentinfo">
-          <section class="logo">
-            <a href="/" class="logo__link">
-              <img src="img/clubok-logo.svg" alt="Clubok" width="65" height="58">
-              <span class="title-span">Творческая студия</span>
-            </a>
-            <p class="logo__bottom-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих, власти, сих. Жизни, однажды вскоре.</p>
-          </section>
-          <section class="page-footer__nav  page-footer__master-class" role="navigation">
-            <h2 class="page-footer__title">Популярные мастер-классы</h2>
-            <ul class="page-footer__nav-list">
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Пошив штор</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>
-              </li>
-            </ul>
-          </section>
-          <section class="page-footer__nav  page-footer__courses" role="navigation">
-            <h2 class="page-footer__title">Наши курсы</h2>
-            <ul class="page-footer__nav-list">
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Пошив штор</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>
-              </li>
-            </ul>
-          </section>
-          <article class="page-footer__nav  page-footer__contacts">
-            <h2 class="page-footer__title">Контакты</h2>
-            <ul class="page-footer__nav-list  page-footer__nav-list--address">
-              <li class="page-footer__nav-item  page-footer__nav-item--phone">
-                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>
-                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>
-              </li>
-              <li class="page-footer__nav-item  page-footer__nav-item--address">
-                <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>
-              </li>
-            </ul>
-            <article class="social-links">
-              <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram
-                <svg width="26" height="26">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/>
-                </svg>
-              </a>
-              <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook
-                <svg width="26" height="26">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/>
-                </svg>
-              </a>
-              <div class="contact-us">
-                <button class="btn  contact-us__btn">Написать нам</button>
-              </div>
-            </article>
-          </article>
-          <section class="copyrights">
-            <span>© 2017. Творческая студия “Clubok”</span>
-          </section>
-        </footer>
-      </div>
+      <div class="container">        <footer class="row  page-footer" role="contentinfo">          <section class="logo">            <a href="/" class="logo__link">              <img src="img/clubok-logo.svg" alt="Clubok" width="65" height="58">              <span class="title-span">Творческая студия</span>            </a>            <p class="logo__bottom-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих, власти, сих. Жизни, однажды вскоре.</p>          </section>          <section class="page-footer__nav  page-footer__master-class" role="navigation">            <h2 class="page-footer__title">Популярные мастер-классы</h2>            <ul class="page-footer__nav-list">              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив штор</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>              </li>            </ul>          </section>          <section class="page-footer__nav  page-footer__courses" role="navigation">            <h2 class="page-footer__title">Наши курсы</h2>            <ul class="page-footer__nav-list">              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив штор</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>              </li>            </ul>          </section>          <article class="page-footer__nav  page-footer__contacts">            <h2 class="page-footer__title">Контакты</h2>            <ul class="page-footer__nav-list  page-footer__nav-list--address">              <li class="page-footer__nav-item  page-footer__nav-item--phone">                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>              </li>              <li class="page-footer__nav-item  page-footer__nav-item--address">                <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>              </li>            </ul>            <article class="social-links">              <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram                <svg width="26" height="26">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/>                </svg>              </a>              <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook                <svg width="26" height="26">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/>                </svg>              </a>              <div class="contact-us">                <button class="btn  contact-us__btn">Написать нам</button>              </div>            </article>          </article>          <section class="copyrights">            <span>© 2017. Творческая студия “Clubok”</span>          </section>        </footer>      </div>
     </div>
-  </div>
-  <div id="modal-enroll" class="modal" tabindex="-1" role="dialog">
-    <div class="modal__dialog" role="document">
-      <div class="modal__content">
-        <div class="modal__header">
-          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
-          <h4 class="modal__title">Хочу записаться!</h4>
-        </div>
-        <div class="modal__body">
-          <form id="modal__enroll-form" class="modal__enroll-form" action="modal_submit" method="get" accept-charset="utf-8">
-            <p>
-              <label for="user-name">Имя</label><br>
-              <input id="user-name" type="text" name="user-name" value="" placeholder="*&thinsp;Обязательно для заполнения" required>
-              <span class="error-message"></span>
-            </p>
-            <p>
-              <label for="user-phone">Телефон</label><br>
-              <input id="user-phone" type="tel" name="user-phone" value="" placeholder="*&thinsp;Обязательно для заполнения" required>
-              <span class="error-message"></span>
-            </p>
-            <p>
-              <label for="user-email">Email</label><br>
-              <input id="user-email" type="email" name="user-email" value="">
-              <span class="error-message"></span>
-            </p>
-            <p>
-              <label for="user-message">Ваше сообщение</label><br>
-              <textarea id="user-message" type="text" name="user-message"></textarea>
-              <span class="error-message"></span>
-            </p>
-          </form>
-        </div>
-        <div class="modal__footer">
-          <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->
-          <button form="modal__enroll-form" type="submit" class="btn">Записаться</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="js/script.min.js"></script>
-</body>
+  </div>  <div id="modal-enroll" class="modal" tabindex="-1" role="dialog">    <div class="modal__dialog" role="document">      <div class="modal__content">        <div class="modal__header">          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>          <h4 class="modal__title">Хочу записаться!</h4>        </div>        <div class="modal__body">          <form id="modal__enroll-form" class="modal__enroll-form" action="modal_submit" method="get" accept-charset="utf-8">            <p>              <label for="user-name">Имя</label><br>              <input id="user-name" type="text" name="user-name" value="" placeholder="*&thinsp;Обязательно для заполнения" required>              <span class="error-message"></span>            </p>            <p>              <label for="user-phone">Телефон</label><br>              <input id="user-phone" type="tel" name="user-phone" value="" placeholder="*&thinsp;Обязательно для заполнения" required>              <span class="error-message"></span>            </p>            <p>              <label for="user-email">Email</label><br>              <input id="user-email" type="email" name="user-email" value="">              <span class="error-message"></span>            </p>            <p>              <label for="user-message">Ваше сообщение</label><br>              <textarea id="user-message" type="text" name="user-message"></textarea>              <span class="error-message"></span>            </p>          </form>        </div>        <div class="modal__footer">          <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->          <button form="modal__enroll-form" type="submit" class="btn">Записаться</button>        </div>      </div>    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>  -->  <script src="js/script.min.js"></script></body>
 </html>
