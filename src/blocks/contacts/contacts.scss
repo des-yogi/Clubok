@@ -3,11 +3,11 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .contacts {
+  margin-bottom: 70px;
 
   $block-name:                &; // #{$block-name}__element
 
   &__content {
-    margin-bottom: 70px;
 
     @include col (
     $screen:  xs,
@@ -55,6 +55,40 @@
       $column: 1,
       $columns: $grid-columns
     )
+
+    .page-footer__nav-list--address {
+      @media (min-width: $screen-lg) {
+        width: auto;
+        border: none;
+      }
+    }
+
+    .page-footer__nav-item--address {
+      margin-top: 20px;
+
+      @media (min-width: $screen-lg) {
+        margin-top: 35px;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 130px;
+    }
+  }
+
+  &__social {
+
+    .social-links {
+      margin-left: 30px;
+
+      @media (min-width: $screen-md) {
+        margin-top: 30px;
+      }
+
+      @media (min-width: $screen-lg) {
+        margin-top: 40px;
+      }
+    }
   }
 
 }

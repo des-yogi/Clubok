@@ -37,7 +37,8 @@
     "gallery": [],
     "contacts": [],
     "contact-form": [],
-    "map": []
+    "map": [],
+    "category-filter": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -10,11 +10,7 @@
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid $second-color;
-
-  @media (min-width: $screen-md) {
-    align-items: flex-start;
-  }
+  // border-bottom: 1px solid $second-color;
 
   $block-name:                &; // #{$block-name}__element
 
@@ -86,7 +82,11 @@
     }
 
     @media (min-width: $screen-lg) {
-      padding-right: 30px;
+      padding-right: 35px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-right: 45px;
     }
   }
 
@@ -120,5 +120,14 @@
         margin-right: 25px;
       }
     }
+  }
+
+  @media (min-width: $screen-md) {
+    align-items: flex-start;
+    padding-top: 25px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 30px;
   }
 }

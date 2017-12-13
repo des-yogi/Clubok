@@ -5,7 +5,17 @@
 .main {
   padding-top: 50px;
   padding-bottom: 50px;
-/*   padding-top: 50px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+/*
 background-image: url(../img/bobbin.png),
                   url(../img/heart.png);
 background-repeat: no-repeat;
