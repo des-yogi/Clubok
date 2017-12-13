@@ -8,7 +8,7 @@
   @@include('_include/page_head.html')
 </head>
 
-<body>
+<body class="body__courses">
 
   <div class="page__inner">
 
@@ -25,32 +25,64 @@
         <h1>Курсы</h1>
 
           <article class="category-filter">
-            <h2 class="category-filter__title">Категории</h2>
+            <h2 class="visually-hidden">Фильтр по категориям</h2>
             <form class="category-filter__form" action="" method="" name="category-filter">
-              <span class="category-filter__input-wrapper">
-                <input id="cat-01" type="checkbox" name="" value="">
-                <label for="cat-01">Категория: Название</label>
-              </span>
-              <span class="category-filter__input-wrapper">
-                <input id="cat-02" type="checkbox" name="" value="">
-                <label for="cat-02">Категория: Название</label>
-              </span>
-              <span class="category-filter__input-wrapper">
-                <input id="cat-03" type="checkbox" name="" value="">
-                <label for="cat-03">Категория: Название</label>
-              </span>
-              <span class="category-filter__input-wrapper">
-                <input id="cat-04" type="checkbox" name="" value="">
-                <label for="cat-04">Категория: Название</label>
-              </span>
-              <span class="category-filter__input-wrapper">
-                <input id="cat-05" type="checkbox" name="" value="">
-                <label for="cat-05">Категория: Название</label>
-              </span>
-              <p>
-                <button type="reset">Очистить</button>
-                <button type="submit">Применить</button>
-              </p>
+              <fieldset class="category-filter__fieldset">
+                <legend class="category-filter__title">Выбор категории</legend>
+                <div class="category-filter__fieldset-inner">
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-01" type="checkbox" name="" value="">
+                    <label for="cat-01">Категория: Название</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-02" type="checkbox" name="" value="">
+                    <label for="cat-02">Категория: Название</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-03" type="checkbox" name="" value="">
+                    <label for="cat-03">Категория: Название</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-04" type="checkbox" name="" value="">
+                    <label for="cat-04">Категория: Название</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="cat-05" type="checkbox" name="" value="">
+                    <label for="cat-05">Категория: Название</label>
+                  </span>
+                </div>
+                <p class="category-filter__btn-wrapper">
+                  <button class="btn" type="reset">Очистить</button>
+                  <button class="btn" type="submit">Применить</button>
+                </p>
+              </fieldset>
+            </form>
+          </article>
+
+          <article class="master-class-filter">
+            <h2 class="visually-hidden">Фильтр по мастер-классам</h2>
+            <form class="category-filter__form" action="" method="" name="category-filter">
+              <fieldset class="category-filter__fieldset">
+                <legend class="category-filter__title">Выбор мастер-класса</legend>
+                <div class="category-filter__fieldset-inner">
+                  <span class="category-filter__input-wrapper">
+                    <input id="nearest-mclass" type="checkbox" name="nearest-mclass" value="">
+                    <label for="nearest-mclass">Ближайшие</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="popular-mclass" type="checkbox" name="popular-mclass" value="">
+                    <label for="popular-mclass">Популярные</label>
+                  </span>
+                  <span class="category-filter__input-wrapper">
+                    <input id="date-of-mclass" type="checkbox" name="date-of-mclass" value="">
+                    <label for="date-of-mclass">По дате</label>
+                  </span>
+                </div>
+                <p class="category-filter__btn-wrapper">
+                  <button class="btn" type="reset">Очистить</button>
+                  <button class="btn" type="submit">Применить</button>
+                </p>
+              </fieldset>
             </form>
           </article>
 
@@ -325,7 +357,7 @@
   </div>
 
   @@include('blocks/modal/modal.html')
-
   @@include('_include/page_bottom.html')
+
 </body>
 </html>

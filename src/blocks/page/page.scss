@@ -124,6 +124,25 @@ body {
     } */
 }
 
+.body__courses {
+  background-image: url(../img/needles-balls.jpg);
+  background-repeat: repeat;
+  background-size: 1024px 1024px;
+  background-position: center center;
+}
+
+.body__courses-unit {
+  background-image: url(../img/bg-01-temp.jpg);
+  background-repeat: repeat;
+  background-size: 1024px 1024px;
+  background-position: center center;
+}
+
+main,
+header {
+  background: $white;
+}
+
 [tabindex='-1']:focus {
   outline: none !important; // stylelint-disable-line  declaration-no-important
 }
@@ -265,4 +284,15 @@ img {
 @keyframes closeMenu {
   from { transform: translateY(0); }
   to { transform: translateY(-100vh); }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }

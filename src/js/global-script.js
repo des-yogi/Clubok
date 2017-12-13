@@ -1,7 +1,7 @@
-// Если на проекте jQuery
-// $( document ).ready(function() {
-//   // code
-// });
+
+$( document ).ready(function() {
+
+});
 
 // Изоляция без jQuery
 // (function(){
