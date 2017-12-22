@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js  page" lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>«Clubok» Творческая студия</title>
-  <meta name="description" content="">  <meta name="viewport" content="width=device-width, initial-scale=1">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <meta name="MobileOptimized" content="320">  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,700,800&amp;subset=cyrillic" rel="stylesheet">  <link href="css/normalize.min.css" rel="stylesheet">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Picture element HTML5 shiv    document.createElement("picture");  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="x" href="/img/apple-touch-icon.png">
+<!DOCTYPE html><html class="no-js  page" lang="ru"><head>  <meta charset="utf-8">  <title>«Clubok» Творческая студия</title>  <meta name="description" content="">  <!--DEV Такой комментарий не попадет в собранный HTML  <meta name="viewport" content="width=1000">  -->  <meta name="viewport" content="width=device-width, initial-scale=1">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <meta name="MobileOptimized" content="320">  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,700,800&amp;subset=cyrillic" rel="stylesheet">  <link href="css/normalize.min.css" rel="stylesheet">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Picture element HTML5 shiv    document.createElement("picture");  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="x" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/manifest.json">
@@ -11,12 +6,10 @@
 <link rel="shortcut icon" href="/img/favicon.ico">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head>
-<body>
-  <div class="page__inner">
-    <div class="page__content">
-      <div class="container">
-        <!-- <div class="row"> -->
+<meta name="theme-color" content="#ffffff"></head><body>  <div class="page__inner">    <div class="page__content">      <div class="container">        <!-- <div class="row"> -->          <!--DEV
+          Нужно убрать пробел между @-ами:
+          @ @include('blocks/page-header/page-header.html')
+          -->
           <header class="page-header">
             <a href="/" class="logo  page-header__logo">
               <img src="img/clubok-logo.svg" alt="Clubok" width="65" height="58">
@@ -55,160 +48,4 @@
               </ul>
             </nav>
           </header>
-        <!-- </div> -->
-      </div>
-      <main class="container main" role="main">
-        <h1>Курсы и мастер-классы</h1>
-          <article class="schedule">
-            <section class="calendar">
-              Календарь
-            </section>
-            <section class="schedule__today">
-              <table class="schedule__table">
-                <tr>
-                  <th class="schedule__first-cell">Время:</th>
-                  <th class="schedule__last-cell">Курc&nbsp;/&nbsp;Мастер-класс</th>
-                </tr>
-                <tr>
-                  <td class="schedule__time">12.30</td>
-                  <td class="schedule__course-name">
-                    <a href="">Мастер-класс: <span>Пошив штор</span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="schedule__time">12.30</td>
-                  <td class="schedule__course-name">
-                    <a href="">Мастер-класс: <span>Пошив штор</span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="schedule__time">12.30</td>
-                  <td class="schedule__course-name">
-                    <a href="">Мастер-класс: <span>Пошив штор</span>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="schedule__time">12.30</td>
-                  <td class="schedule__course-name">
-                    <a href="">Мастер-класс: <span>Пошив штор</span>
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </section>
-          </article>
-          <article class="row  hot-course">
-            <h2 class="hot-course__title">Горячие курсы</h2>
-            <section class="hot-course__item">
-              <a class="hot-course__item-link" href="/">
-                <div class="hot-course__img-wrapper">
-                  <img class="hot-course__img" src="img/sample-hero.jpg" alt="Название курса" width="280" height="203">
-                </div>
-                <div class="hot-course__text">
-                  <h3 class="hot-course__title">Пошив штор</h3>
-                  <ul class="hot-course__descr">
-                    <li class="hot-course__durability"><strong>Длительность:</strong> <span>3 недели (6 уроков по 2 часа) + 4 мастер-класса по 3 часа</span></li>
-                    <li class="hot-course__price"><strong>Стоимость:</strong> <span>300 грн.</span></li>
-                    <li class="hot-course__start-date"><strong>Начало:</strong> <span>24.08.17</span></li>
-                    <li class="hot-course__hint"><strong>Рекомендуем:</strong>
-                      <span>
-                        <img src="img/woman.svg" alt="woman" width="15" height="19">
-                      </span>
-                      <span>
-                        <img src="img/girl.svg" alt="woman" width="15" height="19">
-                      </span>
-                      <span>
-                        <img src="img/boy.svg" alt="woman" width="15" height="19">
-                      </span>
-                    </li>
-                  </ul>
-                  <p>
-                    <a class="btn  hot-course__enroll" data-toggle="modal" data-target="#modal-enroll" href="/">Записаться</a>
-                  </p>
-                </div>
-              </a>
-            </section>
-            <section class="hot-course__item">
-              <a class="hot-course__item-link" href="/">
-                <div class="hot-course__img-wrapper">
-                  <img class="hot-course__img" src="img/sample-hero.jpg" alt="Название курса" width="280" height="203">
-                </div>
-                <div class="hot-course__text">
-                  <h3 class="hot-course__title">Пошив штор</h3>
-                  <ul class="hot-course__descr">
-                    <li class="hot-course__durability"><strong>Длительность:</strong> <span>3 недели (6 уроков по 2 часа) + 4 мастер-класса по 3 часа</span></li>
-                    <li class="hot-course__price"><strong>Стоимость:</strong> <span>300 грн.</span></li>
-                    <li class="hot-course__start-date"><strong>Начало:</strong> <span>24.08.17</span></li>
-                    <li class="hot-course__hint"><strong>Рекомендуем:</strong>
-                      <span>
-                        <img src="img/woman.svg" alt="woman" width="15" height="19">
-                      </span>
-                      <span>
-                        <img src="img/girl.svg" alt="woman" width="15" height="19">
-                      </span>
-                      <span>
-                        <img src="img/boy.svg" alt="woman" width="15" height="19">
-                      </span>
-                    </li>
-                  </ul>
-                  <p>
-                    <a class="btn  hot-course__enroll" data-toggle="modal" data-target="#modal-enroll" href="/">Записаться</a>
-                  </p>
-                </div>
-              </a>
-            </section>
-            <section class="hot-course__item">
-              <a class="hot-course__item-link" href="/">
-                <div class="hot-course__img-wrapper">
-                  <img class="hot-course__img" src="img/sample-hero.jpg" alt="Название курса" width="280" height="203">
-                </div>
-                <div class="hot-course__text">
-                  <h3 class="hot-course__title">Пошив штор</h3>
-                  <ul class="hot-course__descr">
-                    <li class="hot-course__durability"><strong>Длительность:</strong> <span>3 недели (6 уроков по 2 часа) + 4 мастер-класса по 3 часа</span></li>
-                    <li class="hot-course__price"><strong>Стоимость:</strong> <span>300 грн.</span></li>
-                    <li class="hot-course__start-date"><strong>Начало:</strong> <span>24.08.17</span></li>
-                    <li class="hot-course__hint"><strong>Рекомендуем:</strong>
-                      <span>
-                        <img src="img/woman.svg" alt="woman" width="15" height="19">
-                      </span>
-                      <span>
-                        <img src="img/girl.svg" alt="woman" width="15" height="19">
-                      </span>
-                      <span>
-                        <img src="img/boy.svg" alt="woman" width="15" height="19">
-                      </span>
-                    </li>
-                  </ul>
-                  <p>
-                    <a class="btn  hot-course__enroll" data-toggle="modal" data-target="#modal-enroll" href="/">Записаться</a>
-                  </p>
-                </div>
-              </a>
-            </section>
-          </article>
-          <article class="about">
-            <h2 class="about__title">О студии</h2>
-            <div class="row  about__content">
-              <div class="about__img-wrapper">
-                <img src="img/sample-about.jpg" alt="About" width="280" height="227">
-              </div>
-              <div class="about__text">
-                <p class="about__para"><strong>Студия КЛУБОК</strong> — пространство, где Вы окунетесь в море творчества, теплую атмосферу, найдете новых друзей и приобретете полезные навыки.</p>
-                <p class="about__para">С нами Вы можете творить, радоваться, общаться и учиться любимому делу. В студии вы можете начать свой творческий путь и совершенствовать свои умения.</p>
-                <p class="about__para">Наши курсы и мастер-классы в Киеве: стиль и имидж, дизайн одежды, вышивка, живопись, рисунок, композиция, цветоведение, скетчинг, валяние, вязание, декупаж, скрапбукинг, мягкая игрушка и многое другое.</p>
-              </div>
-            </div>
-          </article>
-      </main>
-    </div>
-    <div class="page-footer-wrapper">
-      <div class="container">        <footer class="row  page-footer" role="contentinfo">          <section class="logo">            <a href="/" class="logo__link">              <img src="img/clubok-logo.svg" alt="Clubok" width="65" height="58">              <span class="title-span">Творческая студия</span>            </a>            <p class="logo__bottom-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих, власти, сих. Жизни, однажды вскоре.</p>          </section>          <section class="page-footer__nav  page-footer__master-class" role="navigation">            <h2 class="page-footer__title">Популярные мастер-классы</h2>            <ul class="page-footer__nav-list">              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив штор</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>              </li>            </ul>          </section>          <section class="page-footer__nav  page-footer__courses" role="navigation">            <h2 class="page-footer__title">Наши курсы</h2>            <ul class="page-footer__nav-list">              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив штор</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>              </li>            </ul>          </section>          <article class="page-footer__nav  page-footer__contacts">            <h2 class="page-footer__title">Контакты</h2>            <ul class="page-footer__nav-list  page-footer__nav-list--address">              <li class="page-footer__nav-item  page-footer__nav-item--phone">                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>              </li>              <li class="page-footer__nav-item  page-footer__nav-item--address">                <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>              </li>            </ul>            <article class="social-links">              <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram                <svg width="26" height="26">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/>                </svg>              </a>              <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook                <svg width="26" height="26">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/>                </svg>              </a>              <div class="contact-us">                <button class="btn  contact-us__btn">Написать нам</button>              </div>            </article>          </article>          <section class="copyrights">            <span>© 2017. Творческая студия “Clubok”</span>          </section>        </footer>      </div>
-    </div>
-  </div>  <div id="modal-enroll" class="modal" tabindex="-1" role="dialog">    <div class="modal__dialog" role="document">      <div class="modal__content">        <div class="modal__header">          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>          <h4 class="modal__title">Хочу записаться!</h4>        </div>        <div class="modal__body">          <form id="modal__enroll-form" class="modal__enroll-form" action="modal_submit" method="get" accept-charset="utf-8">            <p>              <label for="user-name">Имя</label><br>              <input id="user-name" type="text" name="user-name" value="" placeholder="*&thinsp;Обязательно для заполнения" required>              <span class="error-message"></span>            </p>            <p>              <label for="user-phone">Телефон</label><br>              <input id="user-phone" type="tel" name="user-phone" value="" placeholder="*&thinsp;Обязательно для заполнения" required>              <span class="error-message"></span>            </p>            <p>              <label for="user-email">Email</label><br>              <input id="user-email" type="email" name="user-email" value="">              <span class="error-message"></span>            </p>            <p>              <label for="user-message">Ваше сообщение</label><br>              <textarea id="user-message" type="text" name="user-message"></textarea>              <span class="error-message"></span>            </p>          </form>        </div>        <div class="modal__footer">          <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->          <button form="modal__enroll-form" type="submit" class="btn">Записаться</button>        </div>      </div>    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>  -->  <script src="js/script.min.js"></script>  <script>
-  </script>
-</body>
-</html>
+        <!-- </div> -->      </div>      <main class="container main" role="main">        <h1>Курсы и мастер-классы</h1>          <article class="schedule">            <section class="calendar">              Календарь            </section>            <section class="schedule__today">              <table class="schedule__table">                <tr>                  <th class="schedule__first-cell">Время:</th>                  <th class="schedule__last-cell">Курc&nbsp;/&nbsp;Мастер-класс</th>                </tr>                <tr>                  <td class="schedule__time">12.30</td>                  <td class="schedule__course-name">                    <a href="">Мастер-класс: <span>Пошив штор</span>                    </a>                  </td>                </tr>                <tr>                  <td class="schedule__time">12.30</td>                  <td class="schedule__course-name">                    <a href="">Мастер-класс: <span>Пошив штор</span>                    </a>                  </td>                </tr>                <tr>                  <td class="schedule__time">12.30</td>                  <td class="schedule__course-name">                    <a href="">Мастер-класс: <span>Пошив штор</span>                    </a>                  </td>                </tr>                <tr>                  <td class="schedule__time">12.30</td>                  <td class="schedule__course-name">                    <a href="">Мастер-класс: <span>Пошив штор</span>                    </a>                  </td>                </tr>              </table>            </section>          </article>          <article class="row  hot-course">            <h2 class="hot-course__title">Горячие курсы</h2>            <section class="hot-course__item">              <a class="hot-course__item-link" href="/">                <div class="hot-course__img-wrapper">                  <img class="hot-course__img" src="img/sample-hero.jpg" alt="Название курса" width="280" height="203">                </div>                <div class="hot-course__text">                  <h3 class="hot-course__title">Пошив штор</h3>                  <ul class="hot-course__descr">                    <li class="hot-course__durability"><strong>Длительность:</strong> <span>3 недели (6 уроков по 2 часа) + 4 мастер-класса по 3 часа</span></li>                    <li class="hot-course__price"><strong>Стоимость:</strong> <span>300 грн.</span></li>                    <li class="hot-course__start-date"><strong>Начало:</strong> <span>24.08.17</span></li>                    <li class="hot-course__hint"><strong>Рекомендуем:</strong>                      <span>                        <img src="img/woman.svg" alt="woman" width="15" height="19">                      </span>                      <span>                        <img src="img/girl.svg" alt="woman" width="15" height="19">                      </span>                      <span>                        <img src="img/boy.svg" alt="woman" width="15" height="19">                      </span>                    </li>                  </ul>                  <p>                    <a class="btn  hot-course__enroll" data-toggle="modal" data-target="#modal-enroll" href="/">Записаться</a>                  </p>                </div>              </a>            </section>            <section class="hot-course__item">              <a class="hot-course__item-link" href="/">                <div class="hot-course__img-wrapper">                  <img class="hot-course__img" src="img/sample-hero.jpg" alt="Название курса" width="280" height="203">                </div>                <div class="hot-course__text">                  <h3 class="hot-course__title">Пошив штор</h3>                  <ul class="hot-course__descr">                    <li class="hot-course__durability"><strong>Длительность:</strong> <span>3 недели (6 уроков по 2 часа) + 4 мастер-класса по 3 часа</span></li>                    <li class="hot-course__price"><strong>Стоимость:</strong> <span>300 грн.</span></li>                    <li class="hot-course__start-date"><strong>Начало:</strong> <span>24.08.17</span></li>                    <li class="hot-course__hint"><strong>Рекомендуем:</strong>                      <span>                        <img src="img/woman.svg" alt="woman" width="15" height="19">                      </span>                      <span>                        <img src="img/girl.svg" alt="woman" width="15" height="19">                      </span>                      <span>                        <img src="img/boy.svg" alt="woman" width="15" height="19">                      </span>                    </li>                  </ul>                  <p>                    <a class="btn  hot-course__enroll" data-toggle="modal" data-target="#modal-enroll" href="/">Записаться</a>                  </p>                </div>              </a>            </section>            <section class="hot-course__item">              <a class="hot-course__item-link" href="/">                <div class="hot-course__img-wrapper">                  <img class="hot-course__img" src="img/sample-hero.jpg" alt="Название курса" width="280" height="203">                </div>                <div class="hot-course__text">                  <h3 class="hot-course__title">Пошив штор</h3>                  <ul class="hot-course__descr">                    <li class="hot-course__durability"><strong>Длительность:</strong> <span>3 недели (6 уроков по 2 часа) + 4 мастер-класса по 3 часа</span></li>                    <li class="hot-course__price"><strong>Стоимость:</strong> <span>300 грн.</span></li>                    <li class="hot-course__start-date"><strong>Начало:</strong> <span>24.08.17</span></li>                    <li class="hot-course__hint"><strong>Рекомендуем:</strong>                      <span>                        <img src="img/woman.svg" alt="woman" width="15" height="19">                      </span>                      <span>                        <img src="img/girl.svg" alt="woman" width="15" height="19">                      </span>                      <span>                        <img src="img/boy.svg" alt="woman" width="15" height="19">                      </span>                    </li>                  </ul>                  <p>                    <a class="btn  hot-course__enroll" data-toggle="modal" data-target="#modal-enroll" href="/">Записаться</a>                  </p>                </div>              </a>            </section>          </article>          <article class="about">            <h2 class="about__title">О студии</h2>            <div class="row  about__content">              <div class="about__img-wrapper">                <img src="img/sample-about.jpg" alt="About" width="280" height="227">              </div>              <div class="about__text">                <p class="about__para"><strong>Студия КЛУБОК</strong> — пространство, где Вы окунетесь в море творчества, теплую атмосферу, найдете новых друзей и приобретете полезные навыки.</p>                <p class="about__para">С нами Вы можете творить, радоваться, общаться и учиться любимому делу. В студии вы можете начать свой творческий путь и совершенствовать свои умения.</p>                <p class="about__para">Наши курсы и мастер-классы в Киеве: стиль и имидж, дизайн одежды, вышивка, живопись, рисунок, композиция, цветоведение, скетчинг, валяние, вязание, декупаж, скрапбукинг, мягкая игрушка и многое другое.</p>              </div>            </div>          </article>      </main>    </div>    <div class="page-footer-wrapper">      <div class="container">        <!--DEV        Нужно убрать пробел между @-ами:        @ @include('blocks/page-footer/page-footer.html')        -->        <footer class="row  page-footer" role="contentinfo">          <section class="logo">            <a href="/" class="logo__link">              <img src="img/clubok-logo.svg" alt="Clubok" width="65" height="58">              <span class="title-span">Творческая студия</span>            </a>            <p class="logo__bottom-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих, власти, сих. Жизни, однажды вскоре.</p>          </section>          <section class="page-footer__nav  page-footer__master-class" role="navigation">            <h2 class="page-footer__title">Популярные мастер-классы</h2>            <ul class="page-footer__nav-list">              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив штор</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>              </li>            </ul>          </section>          <section class="page-footer__nav  page-footer__courses" role="navigation">            <h2 class="page-footer__title">Наши курсы</h2>            <ul class="page-footer__nav-list">              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив штор</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>              </li>            </ul>          </section>          <article class="page-footer__nav  page-footer__contacts">            <h2 class="page-footer__title">Контакты</h2>            <ul class="page-footer__nav-list  page-footer__nav-list--address">              <li class="page-footer__nav-item  page-footer__nav-item--phone">                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>              </li>              <li class="page-footer__nav-item  page-footer__nav-item--address">                <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>              </li>            </ul>            <article class="social-links">              <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram                <svg width="26" height="26">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/>                </svg>              </a>              <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook                <svg width="26" height="26">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/>                </svg>              </a>              <div class="contact-us">                <button class="btn  contact-us__btn">Написать нам</button>              </div>            </article>          </article>          <section class="copyrights">            <span>© 2017. Творческая студия “Clubok”</span>          </section>        </footer>      </div>    </div>  </div>  <!--DEV  Для использования этого файла как шаблона:  @ @include('blocks/modal/modal.html')  (Нужно убрать пробел между символами @)  Подробнее: https://www.npmjs.com/package/gulp-file-include  -->  <div id="modal-enroll" class="modal" tabindex="-1" role="dialog">    <div class="modal__dialog" role="document">      <div class="modal__content">        <div class="modal__header">          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>          <h4 class="modal__title">Хочу записаться!</h4>        </div>        <div class="modal__body">          <form id="modal__enroll-form" class="modal__enroll-form" action="modal_submit" method="get" accept-charset="utf-8">            <p>              <label for="user-name">Имя</label><br>              <input id="user-name" type="text" name="user-name" value="" placeholder="*&thinsp;Обязательно для заполнения" required>              <span class="error-message"></span>            </p>            <p>              <label for="user-phone">Телефон</label><br>              <input id="user-phone" type="tel" name="user-phone" value="" placeholder="*&thinsp;Обязательно для заполнения" required>              <span class="error-message"></span>            </p>            <p>              <label for="user-email">Email</label><br>              <input id="user-email" type="email" name="user-email" value="">              <span class="error-message"></span>            </p>            <p>              <label for="user-message">Ваше сообщение</label><br>              <textarea id="user-message" type="text" name="user-message"></textarea>              <span class="error-message"></span>            </p>          </form>        </div>        <div class="modal__footer">          <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->          <button form="modal__enroll-form" type="submit" class="btn">Записаться</button>        </div>      </div>    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>  -->  <script src="js/script.min.js"></script>  <script>  </script></body></html>

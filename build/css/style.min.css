@@ -590,6 +590,7 @@ blockquote {
   text-transform: none;
   color: white;
   background-color: #015794;
+  border: none;
   cursor: pointer; }
 .btn:hover, .btn:focus {
     text-decoration: none;
@@ -603,12 +604,12 @@ blockquote {
 a.btn--disabled {
       pointer-events: none; }
 .temp-icon-left-arrow {
-  background-image: url(../img/sprite-03951971446928251.png);
+  background-image: url(../img/sprite-04622017746792315.png);
   background-position: 0px 0px;
   width: 32px;
   height: 32px; }
 .temp-icon-right-arrow {
-  background-image: url(../img/sprite-03951971446928251.png);
+  background-image: url(../img/sprite-04622017746792315.png);
   background-position: -36px 0px;
   width: 32px;
   height: 32px; }
