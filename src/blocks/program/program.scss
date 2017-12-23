@@ -12,4 +12,50 @@
     font-size: 16px;
   }
 
+  ul {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    padding-left: 20px;
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        position: absolute;
+        top: 7px;
+        left: -20px;
+        content: "";
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: $main-color;
+
+        @media (min-width: $screen-md) {
+          top: 9px;
+        }
+      }
+    }
+  }
+
+  ol {
+    padding-left: 15px;
+
+    li {
+      margin-bottom: 10px;
+      padding-left: 5px;
+      list-style-position: outside;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
 }

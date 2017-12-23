@@ -39,9 +39,15 @@
     }
   }
 
-  span {
+  .error-message {
     display: block;
-    visibility: hidden;
+    height: 24px;
+
+    & > span {
+      font-size: 12px;
+      color: red;
+    }
+    // visibility: hidden;
   }
 
   input {
@@ -115,4 +121,7 @@
 
   }
 
+  #lastname {
+    display: none;
+  }
 }

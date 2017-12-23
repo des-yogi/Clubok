@@ -63,6 +63,7 @@
   }
 
   &__item-link {
+    display: block;
     color: inherit;
     text-decoration: inherit;
   }
@@ -121,6 +122,9 @@
 
     span {
       display: block;
+      height: 48px;
+      max-height: 48px;
+      overflow: hidden;
     }
   }
 

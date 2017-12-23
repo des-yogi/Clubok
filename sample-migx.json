@@ -1,0 +1,40 @@
+[{
+  "caption": "Lesson",
+  "fields": [{
+    "field": "title_lesson",
+    "caption": "Заголовок занятия",
+    "inputTVtype": "textarea"
+  }, {
+    "field": "duration_lesson",
+    "caption": "Продолжительность занятия",
+    "inputTVtype": "textarea"
+  }, {
+    "field":"descr_lesson",
+    "caption":"Описание урока",
+    "inputTVtype": "textarea"
+  }, {
+    "field": "active",
+    "caption": "Active?",
+    "inputTVtype": "listbox",
+    "inputOptionValues": "Yes==1||No==0"
+  }]
+}]
+
+[{
+  "header": "Заголовок занятия",
+  "sortable": "false",
+  "dataIndex": "title_lesson"
+}, {
+  "header": "Продолжительность занятия",
+  "sortable": "false",
+  "dataIndex": "duration_lesson"
+}, {
+  "header": "Описание занятия",
+  "sortable": "false",
+  "dataIndex": "descr_lesson"
+}, {
+  "header": "Active?",
+  "sortable": "false",
+  "dataIndex": "active"
+}]
+
