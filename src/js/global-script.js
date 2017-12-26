@@ -1,6 +1,18 @@
 
 $( document ).ready(function() {
 
+  $('.fancybox').fancybox({
+      padding: 0,
+      openEffect: 'elastic',
+      helpers:  {
+        overlay: {
+            css: {
+                'background' : 'rgba(0,0,0,0.5)'
+            }
+        }
+      }
+  });
+
 });
 
 // Изоляция без jQuery

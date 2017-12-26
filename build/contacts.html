@@ -1,25 +1,4 @@
-<!DOCTYPE html>
-<html class="no-js  page" lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>«Clubok» Творческая студия</title>
-  <meta name="description" content="">
-  <!--DEV Такой комментарий не попадет в собранный HTML
-  <meta name="viewport" content="width=1000">
-  -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->
-  <meta name="format-detection" content="telephone=no">
-  <meta name="MobileOptimized" content="320">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,700,800&amp;subset=cyrillic" rel="stylesheet">
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet" media="screen">
-  <script>
-    // Picture element HTML5 shiv
-    document.createElement("picture");
-  </script>
-  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы -->
-<link rel="apple-touch-icon" sizes="x" href="/img/apple-touch-icon.png">
+<!DOCTYPE html><html class="no-js  page" lang="ru"><head>  <meta charset="utf-8">  <title>«Clubok» Творческая студия</title>  <meta name="description" content="">  <!--DEV Такой комментарий не попадет в собранный HTML  <meta name="viewport" content="width=1000">  -->  <meta name="viewport" content="width=device-width, initial-scale=1">  <!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->  <meta name="format-detection" content="telephone=no">  <meta name="MobileOptimized" content="320">  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:400,400i,600,700,800&amp;subset=cyrillic" rel="stylesheet">  <link href="css/normalize.min.css" rel="stylesheet">  <link href="css/style.min.css" rel="stylesheet" media="screen">  <script>    // Picture element HTML5 shiv    document.createElement("picture");  </script>  <!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы --><link rel="apple-touch-icon" sizes="x" href="/img/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
 <link rel="manifest" href="/img/manifest.json">
@@ -27,13 +6,7 @@
 <link rel="shortcut icon" href="/img/favicon.ico">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-config" content="/img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff"></head>
-<body>
-  <div class="page__inner">
-    <div class="page__content">
-      <div class="container">
-        <!-- <div class="row"> -->
-          <!--DEV
+<meta name="theme-color" content="#ffffff"></head><body>  <div class="page__inner">    <div class="page__content">      <div class="container">        <!-- <div class="row"> -->          <!--DEV
           Нужно убрать пробел между @-ами:
           @ @include('blocks/page-header/page-header.html')
           -->
@@ -75,207 +48,4 @@
               </ul>
             </nav>
           </header>
-        <!-- </div> -->
-      </div>
-      <main class="container main" role="main">
-        <h1>Контакты</h1>
-        <article class="row  contacts">
-          <section class="map">
-            <div class="map__wrapper">
-              <iframe src="https://snazzymaps.com/embed/34527" width="100%" height="570px" style="border:none;"></iframe>
-            </div>
-          </section>
-          <section class="contacts__content">
-            <ul class="page-footer__nav-list  page-footer__nav-list--address">
-              <li class="page-footer__nav-item  page-footer__nav-item--phone">
-                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>
-                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>
-              </li>
-              <li class="page-footer__nav-item  page-footer__nav-item--address">
-                <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>
-              </li>
-            </ul>
-            <div class="contacts__social">
-              <article class="social-links">
-                <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram
-                  <svg width="26" height="26">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/>
-                  </svg>
-                </a>
-                <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook
-                  <svg width="26" height="26">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/>
-                  </svg>
-                </a>
-              </article>
-            </div>
-          </section>
-        </article>
-        <article class="contact-form">
-          <h2 class="contact-form__title">Задать вопрос</h2>
-          <form id="contact-form" action="" method="" name="contact-form">
-            <fieldset class="contact-form__user-info">
-              <p class="contact-form__field-wrapper">
-                <label for="user-name">Имя</label>
-                <input id="user-name" type="text" name="user-name" value="">
-                <input id="lastname" type="text" name="lastname" value="">
-                <span class="error-message">!error message</span>
-              </p>
-              <p class="contact-form__field-wrapper">
-                <label for="user-phone">Телефон</label>
-                <input id="user-phone" type="tel" name="user-phone" value="">
-                <span class="error-message">!error message</span>
-              </p>
-              <p class="contact-form__field-wrapper">
-                <label for="user-email">Email</label>
-                <input id="user-email" type="tel" name="user-email" value="">
-                <span class="error-message">!error message</span>
-              </p>
-            </fieldset>
-            <fieldset class="contact-form__user-message">
-              <p class="contact-form__field-wrapper">
-                <label for="user-message">Ваше сообщение</label>
-                <textarea id="user-message" name="user-message" placeholder="Введите сообщение"></textarea>
-                <span class="error-message">!error message</span>
-              </p>
-              <p class="contact-form__field-wrapper  contact-form__field-wrapper--btn">
-                <button class="btn" type="submit">Отправить</button>
-              </p>
-            </fieldset>
-          </form>
-        </article>
-      </main>
-    </div>
-    <div class="page-footer-wrapper">
-      <div class="container">
-        <!--DEV
-        Нужно убрать пробел между @-ами:
-        @ @include('blocks/page-footer/page-footer.html')
-        -->
-        <footer class="row  page-footer" role="contentinfo">
-          <section class="logo">
-            <a href="/" class="logo__link">
-              <img src="img/clubok-logo.svg" alt="Clubok" width="65" height="58">
-              <span class="title-span">Творческая студия</span>
-            </a>
-            <p class="logo__bottom-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих, власти, сих. Жизни, однажды вскоре.</p>
-          </section>
-          <section class="page-footer__nav  page-footer__master-class" role="navigation">
-            <h2 class="page-footer__title">Популярные мастер-классы</h2>
-            <ul class="page-footer__nav-list">
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Пошив штор</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>
-              </li>
-            </ul>
-          </section>
-          <section class="page-footer__nav  page-footer__courses" role="navigation">
-            <h2 class="page-footer__title">Наши курсы</h2>
-            <ul class="page-footer__nav-list">
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Пошив штор</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>
-              </li>
-              <li class="page-footer__nav-item">
-                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>
-              </li>
-            </ul>
-          </section>
-          <article class="page-footer__nav  page-footer__contacts">
-            <h2 class="page-footer__title">Контакты</h2>
-            <ul class="page-footer__nav-list  page-footer__nav-list--address">
-              <li class="page-footer__nav-item  page-footer__nav-item--phone">
-                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>
-                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>
-              </li>
-              <li class="page-footer__nav-item  page-footer__nav-item--address">
-                <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>
-              </li>
-            </ul>
-            <article class="social-links">
-              <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram
-                <svg width="26" height="26">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/>
-                </svg>
-              </a>
-              <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook
-                <svg width="26" height="26">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/>
-                </svg>
-              </a>
-              <div class="contact-us">
-                <button class="btn  contact-us__btn">Написать нам</button>
-              </div>
-            </article>
-          </article>
-          <section class="copyrights">
-            <span>© 2017. Творческая студия “Clubok”</span>
-          </section>
-        </footer>
-      </div>
-    </div>
-  </div>
-  <!--DEV
-  Для использования этого файла как шаблона:
-  @ @include('blocks/modal/modal.html')
-  (Нужно убрать пробел между символами @)
-  Подробнее: https://www.npmjs.com/package/gulp-file-include
-  -->
-  <div id="modal-enroll" class="modal" tabindex="-1" role="dialog">
-    <div class="modal__dialog" role="document">
-      <div class="modal__content">
-        <div class="modal__header">
-          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
-          <h4 class="modal__title">Хочу записаться!</h4>
-        </div>
-        <div class="modal__body">
-          <form id="modal__enroll-form" class="modal__enroll-form" action="modal_submit" method="get" accept-charset="utf-8">
-            <p>
-              <label for="user-name">Имя</label><br>
-              <input id="user-name" type="text" name="user-name" value="" placeholder="*&thinsp;Обязательно для заполнения" required>
-              <span class="error-message"></span>
-            </p>
-            <p>
-              <label for="user-phone">Телефон</label><br>
-              <input id="user-phone" type="tel" name="user-phone" value="" placeholder="*&thinsp;Обязательно для заполнения" required>
-              <span class="error-message"></span>
-            </p>
-            <p>
-              <label for="user-email">Email</label><br>
-              <input id="user-email" type="email" name="user-email" value="">
-              <span class="error-message"></span>
-            </p>
-            <p>
-              <label for="user-message">Ваше сообщение</label><br>
-              <textarea id="user-message" type="text" name="user-message"></textarea>
-              <span class="error-message"></span>
-            </p>
-          </form>
-        </div>
-        <div class="modal__footer">
-          <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->
-          <button form="modal__enroll-form" type="submit" class="btn">Записаться</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--DEV Такой комментарий не попадет в собранный HTML
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>
-  -->
-  <script src="js/script.min.js"></script>
-</body>
-</html>
+        <!-- </div> -->      </div>      <main class="container main" role="main">        <h1>Контакты</h1>        <article class="row  contacts">          <section class="map">            <div class="map__wrapper">              <iframe src="https://snazzymaps.com/embed/34527" width="100%" height="570px" style="border:none;"></iframe>            </div>          </section>          <section class="contacts__content">            <ul class="page-footer__nav-list  page-footer__nav-list--address">              <li class="page-footer__nav-item  page-footer__nav-item--phone">                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>              </li>              <li class="page-footer__nav-item  page-footer__nav-item--address">                <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>              </li>            </ul>            <div class="contacts__social">              <article class="social-links">                <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram                  <svg width="26" height="26">                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/>                  </svg>                </a>                <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook                  <svg width="26" height="26">                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/>                  </svg>                </a>              </article>            </div>          </section>        </article>        <article class="contact-form">          <h2 class="contact-form__title">Задать вопрос</h2>          <form id="contact-form" action="" method="" name="contact-form">            <fieldset class="contact-form__user-info">              <p class="contact-form__field-wrapper">                <label for="user-name">Имя</label>                <input id="user-name" type="text" name="user-name" value="">                <span class="error-message">!error message</span>              </p>              <p class="contact-form__field-wrapper">                <label for="user-phone">Телефон</label>                <input id="user-phone" type="tel" name="user-phone" value="">                <span class="error-message">!error message</span>              </p>              <p class="contact-form__field-wrapper">                <label for="user-email">Email</label>                <input id="user-email" type="tel" name="user-email" value="">                <span class="error-message">!error message</span>              </p>            </fieldset>            <fieldset class="contact-form__user-message">              <p class="contact-form__field-wrapper">                <label for="user-message">Ваше сообщение</label>                <textarea id="user-message" name="user-message" placeholder="Введите сообщение"></textarea>                <span class="error-message">!error message</span>              </p>              <p class="contact-form__field-wrapper  contact-form__field-wrapper--btn">                <button class="btn" type="submit">Отправить</button>              </p>            </fieldset>          </form>        </article>      </main>    </div>    <div class="page-footer-wrapper">      <div class="container">        <!--DEV        Нужно убрать пробел между @-ами:        @ @include('blocks/page-footer/page-footer.html')        -->        <footer class="row  page-footer" role="contentinfo">          <section class="logo">            <a href="/" class="logo__link">              <img src="img/clubok-logo.svg" alt="Clubok" width="65" height="58">              <span class="title-span">Творческая студия</span>            </a>            <p class="logo__bottom-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Своих, власти, сих. Жизни, однажды вскоре.</p>          </section>          <section class="page-footer__nav  page-footer__master-class" role="navigation">            <h2 class="page-footer__title">Популярные мастер-классы</h2>            <ul class="page-footer__nav-list">              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив штор</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>              </li>            </ul>          </section>          <section class="page-footer__nav  page-footer__courses" role="navigation">            <h2 class="page-footer__title">Наши курсы</h2>            <ul class="page-footer__nav-list">              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив штор</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Пошив домашнего текстиля</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Вторая жизнь любимых вещей</a>              </li>              <li class="page-footer__nav-item">                <a class="page-footer__nav-link" href="">Я — стилист. Найди свой стиль</a>              </li>            </ul>          </section>          <article class="page-footer__nav  page-footer__contacts">            <h2 class="page-footer__title">Контакты</h2>            <ul class="page-footer__nav-list  page-footer__nav-list--address">              <li class="page-footer__nav-item  page-footer__nav-item--phone">                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380443841654">(044) 384-16-54</a>                <a class="page-footer__nav-link  page-footer__nav-link--phone" href="tel:+380674086327">(067) 408-63-27</a>              </li>              <li class="page-footer__nav-item  page-footer__nav-item--address">                <address class="page-footer__nav-address">Киев, Борщаговская, 204, корп.1</address>              </li>            </ul>            <article class="social-links">              <a class="social-links__link  social-links__link--insta" href="/" data-name="hidden" title="Instagram">Instagram                <svg width="26" height="26">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#instagram"/>                </svg>              </a>              <a class="social-links__link  social-links__link--fb" href="/" data-name="hidden" title="Facebook">Facebook                <svg width="26" height="26">                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#facebook"/>                </svg>              </a>              <div class="contact-us">                <button class="btn  contact-us__btn">Написать нам</button>              </div>            </article>          </article>          <section class="copyrights">            <span>© 2017. Творческая студия “Clubok”</span>          </section>        </footer>      </div>    </div>  </div>  <!--DEV  Для использования этого файла как шаблона:  @ @include('blocks/modal/modal.html')  (Нужно убрать пробел между символами @)  Подробнее: https://www.npmjs.com/package/gulp-file-include  -->  <div id="modal-enroll" class="modal" tabindex="-1" role="dialog">    <div class="modal__dialog" role="document">      <div class="modal__content">        <div class="modal__header">          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>          <h4 class="modal__title">Хочу записаться!</h4>        </div>        <div class="modal__body">          <form id="modal__enroll-form" class="modal__enroll-form" action="modal_submit" method="get" accept-charset="utf-8">            <p>              <label for="user-name">Имя</label><br>              <input id="user-name" type="text" name="user-name" value="" placeholder="*&thinsp;Обязательно для заполнения" required>              <span class="error-message"></span>            </p>            <p>              <label for="user-phone">Телефон</label><br>              <input id="user-phone" type="tel" name="user-phone" value="" placeholder="*&thinsp;Обязательно для заполнения" required>              <span class="error-message"></span>            </p>            <p>              <label for="user-email">Email</label><br>              <input id="user-email" type="email" name="user-email" value="">              <span class="error-message"></span>            </p>            <p>              <label for="user-message">Ваше сообщение</label><br>              <textarea id="user-message" type="text" name="user-message"></textarea>              <span class="error-message"></span>            </p>          </form>        </div>        <div class="modal__footer">          <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->          <button form="modal__enroll-form" type="submit" class="btn">Записаться</button>        </div>      </div>    </div>  </div>  <!--DEV Такой комментарий не попадет в собранный HTML  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  <script>window.jQuery || document.write('<script src="js/jquery.3.1.1.min.js"><\/script>')</script>  -->  <script src="js/script.min.js"></script></body></html>
